@@ -1,6 +1,7 @@
 # Notes
 Refering to [caninedc.org manifest](https://github.com/uc-cdis/cdis-manifest/blob/master/caninedc.org/manifest.json)
 
+
 ## versions section changes
 Changing it to use docker images from [docker-compose.yml](https://github.com/NIEHS/compose-services/blob/master/docker-compose.yml) in NIEHS/compose-services.  
 For production we can later use AWS ECR if images need tweaking
