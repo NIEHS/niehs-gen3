@@ -21,7 +21,6 @@ mappings:
       - name: strain 
       - name: sex 
       - name: hybridization_name
-
     aggregated_props:
       - name: _microarrays_count
         path: microarrays

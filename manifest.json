@@ -45,11 +45,11 @@
     "guppy": {
         "indices": [
             {
-                "index": "cebsdc_etl",
+                "index": "subject_etl",
                 "type": "subject"
             },
             {
-                "index": "cebsdc_file",
+                "index": "file_etl",
                 "type": "file"
             }
         ],
