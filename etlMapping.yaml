@@ -1,27 +1,46 @@
 mappings:
-  - name: publication_etl
-    doc_type: publication
+  - name: subject_etl
+    doc_type: subject
     type: aggregator
-    root: publication
+    root: subject
     props:
-      - name: project_id
       - name: submitter_id
-      - name: pmid
-      - name: doi
-      - name: title
+      - name: project_id
+      - name: subject_id
+      - name: subject_name
+      - name: body_weight
+      - name: study_time
+      - name: study_time_unit
+      - name: age_start_lower
+      - name: age_start_higher
+      - name: age_start_unit
+      - name: death_status
+      - name: species_common_name
+      - name: genus 
+      - name: species 
+      - name: strain 
+      - name: sex 
+      - name: hybridization_name
+
     aggregated_props:
-      - name: _levels_of_evidence_count
-        path: levels_of_evidence
+      - name: _microarrays_count
+        path: microarrays
         fn: count
-      - name: _lesions_count
-        path: levels_of_evidence.lesions
-        fn: count
-      - name: _p03_non_neoplastic_charts_count
-        path: p03_non_neoplastic_charts
-        fn: count
-    parent_props:
-      - path: projects[project_code:code,project_name:name]
-  - name: publication_file
+    joining_props:
+      - index: file
+        join_on: subject_id
+        props:
+          - name: data_format
+            src: data_format
+            fn: set
+          - name: data_type
+            src: data_type
+            fn: set
+          - name: file_id
+            alternate_src: _file_id
+            src: file_id
+            fn: set
+  - name: file_etl
     doc_type: file
     type: collector
     root: None
@@ -34,7 +53,10 @@ mappings:
       - name: data_format
       - name: data_type
       - name: state
-    
-
-
-    
+    injecting_props:
+      subject:
+        props:
+          - name: subject_id
+            src: id
+            fn: set
+          - name: project_id
