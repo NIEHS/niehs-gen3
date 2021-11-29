@@ -2,36 +2,26 @@
   "graphql": {
     "boardCounts": [
       {
-        "graphql": "_level_of_evidence_count",
-        "name": "Level of Evidence Conclusion",
-        "plural": "Level of Evidence Conclusions"
-      },
-      {
-        "graphql": "_lesion_count",
-        "name": "Lesion",
-        "plural": "Lesions"
+        "graphql": "_microarrays_count",
+        "name": "Microarray Assay",
+        "plural": "Microarray Assays"
       }
     ],
     "chartCounts": [
       {
-        "graphql": "_level_of_evidence_count",
-        "name": "Level of Evidence Conclusion",
-        "plural": "Level of Evidence Conclusions"
-      },
-      {
-        "graphql": "_lesion_count",
-        "name": "Lesion",
-        "plural": "Lesions"
+        "graphql": "_microarrays_count",
+        "name": "Microarray Assay",
+        "plural": "Microarray Assays"
       }
     ],
     "projectDetails": "boardCounts"
   },
   "components": {
-    "appName": "NIEHS Data Commons",
+    "appName": "CEBS Data Commons",
     "index": {
       "introduction": {
-        "heading": "NIEHS Data Commons",
-        "text": "A Proof of Concept of an NIEHS Data Commons environment via Gen3",
+        "heading": "CEBS Data Commons",
+        "text": "A Proof of Concept of a CEBS Data Commons environment via Gen3",
         "link": "/submission"
       },
       "buttons": [
@@ -66,7 +56,7 @@
       ]
     },
     "navigation": {
-      "title": "NIEHS Data Commons",
+      "title": "CEBS Data Commons",
       "items": [
         {
           "icon": "dictionary",
@@ -107,9 +97,9 @@
       ]
     },
     "login": {
-      "title": "NIEHS Data Commons",
-      "subTitle": "explore, analyze, and share research data",
-      "text": "NIEHS Data Commons Proof of Concept",
+      "title": "CEBS Data Commons",
+      "subTitle": "Explore CEBS Data Sets",
+      "text": "CEBS Data Commons Proof of Concept",
       "contact": "If you have any questions about access or the registration process, please contact ",
       "email": "mike.conway@nih.gov"
     },
@@ -125,6 +115,14 @@
         "publication_id": {
           "chartType": "bar",
           "title": "Publications"
+        },
+        "study_id": {
+          "chartType": "bar",
+          "title": "Studies"
+        },
+        "subject_id": {
+          "chartType": "bar",
+          "title": "Subject"
         }
       },
       "filters": {
