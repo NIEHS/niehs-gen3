@@ -1,36 +1,27 @@
 mappings:
-  - name: cebsdc_etl
-    doc_type: subject
+  - name: publication_etl
+    doc_type: publication
     type: aggregator
-    root: subject
+    root: publication
     props:
-      - name: submitter_id
       - name: project_id
-      - name: subject_name
-      - name: body_weight
-      - name: species_common_name
-      - name: strain
-      - name: genus
-      - name: species
-      - name: sex
+      - name: submitter_id
+      - name: pmid
+      - name: doi
+      - name: title
     aggregated_props:
-      - name: _microarray_files_count
-        path: microarray_files_count
+      - name: _levels_of_evidence_count
+        path: levels_of_evidence
         fn: count
-    joining_props:
-      - index: file
-        join_on: subject_id
-        props:
-          - name: data_format
-            src: data_format
-            fn: set
-          - name: data_type
-            src: data_type
-            fn: set
-          - name: data_category
-            src: data_type
-            fn: set
-  - name: cebsdc_file
+      - name: _lesions_count
+        path: levels_of_evidence.lesions
+        fn: count
+      - name: _p03_non_neoplastic_charts_count
+        path: p03_non_neoplastic_charts
+        fn: count
+    parent_props:
+      - path: projects[project_code:code,project_name:name]
+  - name: publication_file
     doc_type: file
     type: collector
     root: None
@@ -42,11 +33,8 @@ mappings:
       - name: file_size
       - name: data_format
       - name: data_type
-      - name: data_category
       - name: state
-    injecting_props:
-      subject:
-        props:
-          - name: subject_id
-            src: id
-          - name: project_id
+    
+
+
+    
