@@ -122,16 +122,20 @@
         },
         "subject_id": {
           "chartType": "bar",
-          "title": "Subject"
+          "title": "Subjects"
         }
       },
       "filters": {
         "tabs": [
           {
-            "title": "Publications",
+            "title": "Subjects",
             "fields": [
-              "publication-id",
-              "title"
+              "project_id",
+              "genus",
+              "species",
+              "strain",
+              "sex",
+              "hybridization_name"
             ]
           }
         ]
@@ -140,7 +144,7 @@
         "enabled": true,
         "fields": [
           "project_id",
-          "publication-id",
+          "publication_id",
           "title"
         ]
       },

@@ -49,6 +49,10 @@
                 "type": "subject"
             },
             {
+                "index": "publication_etl",
+                "type": "publication"
+            },
+            {
                 "index": "file_etl",
                 "type": "file"
             }

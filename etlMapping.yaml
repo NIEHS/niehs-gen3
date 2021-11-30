@@ -39,6 +39,15 @@ mappings:
             alternate_src: _file_id
             src: file_id
             fn: set
+  - name: publication_etl
+    doc_type: publication
+    type: aggregator
+    root: publication
+    props:
+      - name: project_id
+      - name: pmid
+      - name: doi
+      - name: title
   - name: file_etl
     doc_type: file
     type: collector
