@@ -1,7 +1,7 @@
 {
     "notes": [
-        "This is the dev environment manifest",
-        "That's all I have to say"
+        "CEBS sandbox manifest",
+        "see https://github.com/NIEHS/niehs-gen3"
     ],
     "jenkins": {
         "autodeploy": "yes"
