@@ -158,14 +158,14 @@
         }
       ],
       "guppyConfig": {
-        "dataType": "publication",
-        "nodeCountTitle": "Publications",
+        "dataType": "subject",
+        "nodeCountTitle": "Subjects",
         "fieldMapping": [],
         "manifestMapping": {
-          "resourceIndexType": "file",
-          "resourceIdField": "object_id",
-          "referenceIdFieldInResourceIndex": "publication_id",
-          "referenceIdFieldInDataIndex": "publication_id"
+          "resourceIndexType": "subject",
+          "resourceIdField": "subject_id",
+          "referenceIdFieldInResourceIndex": "object_id",
+          "referenceIdFieldInDataIndex": "object_id"
         }
       }
     }
