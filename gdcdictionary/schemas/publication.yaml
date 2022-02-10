@@ -3,11 +3,11 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "publication"
 title: Publication
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: http://gen3.niehs.nih.gov
 category: administrative
 program: '*'
 project: '*'
-description: "Publication for a project."
+description: "Publication is a process - the act of issuing printed materials synonym: printed materials includes peer-reviewed journal articles, DNTP reports, white papers, deposition of data in SRA, etc. metadata: date of publication, authors, contact information, supporting data location, link to data in other databases,  GEO: species taxon and platform ID"
 additionalProperties: false
 submittable: true
 validators: null
@@ -15,6 +15,13 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - publication_id
+  - authors
+  - data_in_publication #TODO: verify this is not just repeated as samples in data
+  - data_owner
+  - email
+  - phone
+  - lab
   - state
   - created_datetime
   - updated_datetime
@@ -56,6 +63,34 @@ properties:
     $ref: "_definitions.yaml#/to_many_project"
   project_id:
     type: string
+  publication_id:
+    type: string
+    description: "PUBMED ID for publication ID[publication:PUBMED ID]"
+  authors:
+    type: array
+    minItems: 1
+    items:
+        author:
+          type: string
+          description: "author name [publication:author]"
+
+data_owner:
+  type: string
+  description: "data owner name [publication:data owner]"
+
+email:
+  type: string
+  description: "email [publication:email]"
+
+phone:
+  type: string
+  description: "phone [publication:phone]"
+
+lab:
+  type: string
+  description: "lab [publication:lab]"
+
+uniqueItems: true
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
