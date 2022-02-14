@@ -22,6 +22,16 @@ systemProperties:
   - email
   - phone
   - lab
+  - academic_department
+  - academic_institution
+  - institution_address
+  - institution_city
+  - institution_state
+  - institution_post_zip_code
+  - institution_country
+  - data_location
+  - keywords
+  - data_location_relationships
   - state
   - created_datetime
   - updated_datetime
@@ -89,6 +99,73 @@ phone:
 lab:
   type: string
   description: "lab [publication:lab]"
+
+academic_department:
+  type: string
+  description: "academic department [publication:academic department]"
+
+academic_institution:
+  type: string
+  description: "academic institution [publication:academic institution]"
+
+institution_address:
+  type: string
+  description: "institution address [publication:institution address]"
+
+institution_city:
+  type: string
+  description: "institution city [publication:institution city]"
+
+institution_state:
+  type: string
+  description: "institution state [publication:institution state]"
+
+institution_post_zip_code:
+  type: string
+  description: "institution post zip code [publication:institution post / zip code]"
+
+institution_country:
+  type: string
+  description: "institution country [publication:institution country]"
+
+data_location:
+  type: array
+    minItems: 1
+    items:
+        ftp_link:
+          type: string
+          description: "link to data [publication:data location]"
+data_location:
+  type: array
+    minItems: 1
+    items:
+        ftp_link:
+          type: string
+          description: "link to data [publication:data location]"
+
+
+data_location_relationships:
+  type: array
+    minItems: 1
+    items:
+        data_location_relationship:
+          type: string
+          description: "data location relationship [publication:data location relationship]"
+
+keywords:
+  type: array
+    minItems: 1
+    items:
+      keyword:
+        type: object
+        additionalProperties: True
+        properties:
+          key_name:
+            type: string
+            description: "keyword name [publication:keyword]"
+          value:
+            type: string
+            description: "keyword value [publication:value]"
 
 uniqueItems: true
   created_datetime:
