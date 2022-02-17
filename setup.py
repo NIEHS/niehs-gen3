@@ -7,11 +7,10 @@ setup(
     license="Apache",
     packages=find_packages(),
     install_requires=[
-        'dictionaryutils',
+        'dictionaryutils==3.4.2',
+        'requests==2.26.0'
     ],
-    dependency_links=[
-       "git+https://github.com/uc-cdis/dictionaryutils.git@2.0.4#egg=dictionaryutils",
-    ],
+    dependency_links=[],
     package_data={
         "gdcdictionary": [
             "schemas/*.yaml",
