@@ -4,7 +4,7 @@ id: "study"
 title: Study
 type: object
 nodeTerms: null
-namespace: https://nci-crdc-demo.datacommons.io/
+namespace: http://gen3.niehs.nih.gov/
 category: administrative
 program: '*'
 project: '*'
@@ -43,9 +43,29 @@ properties:
 
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  analytical_fraction:
-    description: Type of peptide or protein enrichment
+  ID_Acc_number:
+    description: CEBS id
     type: string
+
+  Title:
+    description: Study name
+    type: string   
+  
+  classification:
+    description:  classification
+    type: string
+
+  Author:
+    description: Author
+    type: string
+
+  species:
+    description: in vivo, invitro
+    type: string
+
+  chemical:
+    description: study chemical
+    type: array
 
   data_description:
     description: Brief description of the data being provided for this study. Free
