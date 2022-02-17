@@ -34,11 +34,11 @@ required:
 
 uniqueKeys:
   - [ id ]
-  - [ project_id, submitter_id ] 
+  - [ project_id, submitter_id ]
 
 properties:
   type:
-    enum: [ "publication" ] 
+    enum: [ "publication" ]
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
@@ -112,40 +112,34 @@ properties:
 
   data_location:
     type: array
-      minItems: 1
-      items:
-          ftp_link:
-            type: string
-            description: "link to data [publication:data location]"
-  data_location:
-    type: array
-      minItems: 1
-      items:
-          ftp_link:
-            type: string
-            description: "link to data [publication:data location]"
+    minItems: 1
+    items:
+      ftp_link:
+        type: string
+        description: "link to data [publication:data location]"
+
   data_location_relationships:
     type: array
-      minItems: 1
-      items:
-          data_location_relationship:
-            type: string
-            description: "data location relationship [publication:data location relationship]"
-            keywords:
-              type: array
-                minItems: 1
-                items:
-                  keyword:
-                    type: object
-                    additionalProperties: True
-                    properties:
-                      key_name:
-                        type: string
-                        description: "keyword name [publication:keyword]"
-                      value:
-                        type: string
-                        description: "keyword value [publication:value]"
-                  uniqueItems: true
+    minItems: 1
+    items:
+      data_location_relationship:
+        type: string
+        description: "data location relationship [publication:data location relationship]"
+      keywords:
+        type: array
+        minItems: 1
+        items:
+          keyword:
+            type: object
+            additionalProperties: True
+            properties:
+              key_name:
+                type: string
+                description: "keyword name [publication:keyword]"
+              value:
+                type: string
+                description: "keyword value [publication:value]"
+
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
