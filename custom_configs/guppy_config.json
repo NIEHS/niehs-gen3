@@ -1,0 +1,14 @@
+{
+    "indices": [
+        {
+            "index": "publication_etl",
+            "type": "publication"
+        },
+        {
+            "index": "publication_file",
+            "type": "file"
+        }
+    ],
+    "config_index": "etl_array-config",
+    "auth_filter_field": "auth_resource_path"
+}
