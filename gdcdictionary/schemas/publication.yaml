@@ -65,7 +65,7 @@ properties:
   publication_id:
     type: string
     description: "PUBMED ID for publication ID[PUBLICATION:PUBMED_ID]"
-  document_title:
+  publication_title:
     type: string
     description: "Title/document_title for publication[PUBLICATION:Document_tile/Title]"
   data_links:

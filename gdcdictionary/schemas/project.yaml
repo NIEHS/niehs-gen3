@@ -7,22 +7,18 @@ program: '*'
 project: '*'
 category: administrative
 description: >
-  Project is equivalent to Toxicology Investigation a self-contained scientific enquiry composed of studies which generate data or meta-analysis of studies require to have a title and data owner GEO has free-text design description for a series which would be at the project level
+  Any specifically defined piece of work that is undertaken or attempted to meet a single
+  requirement. (NCIt C47885)
 additionalProperties: false
 submittable: true
 validators: null
 
 systemProperties:
   - id
-  - geo_accession_number
   - state
   - released
-  - public_date
-  - submission_date
-  - last_update_date
   - releasable
   - intended_release_date
-  - design_description
 
 required:
   - code
@@ -53,10 +49,7 @@ properties:
     description: "UUID for the project." # TOREVIEW
   name:
     type: string
-    description: "DNTP project title [investigation:title]"
-  design_description:
-    type: string
-    description: "DNTP design description [investigation:investigation design description]"
+    description: "Display name/brief description for the project." # TOREVIEW
   code:
     type: string
     description: "Unique identifier for the project."
@@ -135,7 +128,7 @@ properties:
   released:
     description: |
       To release a project is to tell the GDC to include all submitted
-      entities in the next GDC index [investigation:data publication status:public].
+      entities in the next GDC index.
     default: false
     type: boolean
 
@@ -145,30 +138,35 @@ properties:
     default: false
     type: boolean
 
-  release_date:
-    description: Tracks a Project's release date [investigation:data publication status:public date].
-    type: string
-    format: date-time
-  
-  submission_date:
-    description: Tracks a Project's submission date [investigation:data publication status:submit date].
-    type: string
-    format: date-time
-
-  last_update_date:
-    description: Tracks a Project's last update date [investigation:data publication status:last update date].
-    type: string
-    format: date-time
-
   intended_release_date:
     description: Tracks a Project's intended release date.
     type: string
     format: date-time
-  
-  geo_accession_number:
-    type: string
-    description: "The GEO accession number provided for the project. [investigation:GEO acc no]"
-  
   dbgap_accession_number:
     type: string
     description: "The dbgap accession number provided for the project."
+
+  # CEBS added properties
+  cebs_accession_number:
+    type: string
+    description: "CEBS accession number[INVESTIGATION:Investigation_CEBS_Acc_no]"
+  geo_accession_number:
+    type: string
+    description: "GEO accession number[INVESTIGATION:GEO_acc_no]"
+  project_title:
+    type: string
+    description: "Title for Investigation[INVESTIGATION:Title]"
+
+
+  # not sure if following properties are needed here!!
+  data_links:
+    type: array
+    minItems: 1
+    items:
+      data_link:
+        type: string
+        description: "data name [INVESTIGATION:DATA LINK]"
+  parent_project:
+    type: string
+    description: "parent project for publication [INVESTIGATION: PARENT INVESTIGATION]"
+
