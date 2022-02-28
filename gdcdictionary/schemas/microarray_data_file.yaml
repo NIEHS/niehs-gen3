@@ -40,16 +40,10 @@ links:
         required: false
 
 required:
-  - type
-  - submitter_id
-  - md5sum
-  - file_size
-  - file_name
-  - data_type
-  - data_format
-  - data_category
+  - subject_id
+  - tissue
+  - test_article
 
- 
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
@@ -61,6 +55,26 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     type: string
+
+  subject_id:
+    description: animal id
+    type: string
+
+  data_file_name:
+    description: data file GEO accession
+    type: string
+
+  test_article:
+    description: test article
+    type: string
+
+  sample_source_name_ch1:
+    description: Sample_source_name_ch1
+    type: string
+
+  tissue:
+   description: tissue type
+   type: string
 
   data_format:
     term:
