@@ -15,6 +15,9 @@ $pipenv python=3.9`
 $pipenv shell
 --activate "niehs-gen3" env
 $pipenv install
+
+$pipenv install -r requirements.txt
+
 --will take whatever in the pipfile and install all packages
 
 --To use "niehs-gen3" to run your file in the pyCharm Go to "IDE and project settings"->Preferences->Python interpreters
