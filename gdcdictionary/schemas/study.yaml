@@ -37,43 +37,50 @@ required:
 
 uniqueKeys:
   - [id]
-  - [project_id, submitter_id]
+  - [project_id,submitter_id]
 
 properties:
 
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  ID_Acc_number:
+  id_acc_number:
     description: CEBS id
     type: string
 
-  Title:
+  title:
     description: Study name
     type: string   
   
-  classification:
-    description:  classification
+  study_classification:
+    description: or experiment_type.type of study protocol
     type: string
 
-  Author:
+  author:
     description: Author
     type: string
 
   species:
-    description: in vivo, invitro
+    description: in vivo, invitro (??)
     type: string
 
   chemical:
-    description: study chemical
+    description: study chemical compound
     type: array
 
+  cell_line:
+    description: cell lines for the study
+    type: array
+
+  study_intervention:
+    description: intervention
+    type: string
+
   data_description:
-    description: Brief description of the data being provided for this study. Free
-      text
+    description: Brief description of the data being provided for this study.
     type: string
 
   experiment_type:
-    description: General strategy used for differential analysis
+    description: also called classification. General strategy used for differential analysis
     type: string
 
   is_clinical_trial:
