@@ -32,6 +32,7 @@ mappings:
     root: None
     category: data_file
     props:
+      - name: id
       - name: object_id
       - name: md5sum
       - name: data_file_name
