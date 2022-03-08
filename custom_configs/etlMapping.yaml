@@ -40,7 +40,7 @@ mappings:
       - name: data_type
       - name: state
     injecting_props:
-      subject:
+      study:
         props:
           - name: _study_id
             src: id
