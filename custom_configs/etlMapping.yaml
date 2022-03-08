@@ -20,9 +20,6 @@ mappings:
           - name: data_format
             src: data_format
             fn: set
-          - name: file_id
-            src: id
-            fn: set
           - name: data_file_name
             src: data_file_name
             fn: set
@@ -32,7 +29,6 @@ mappings:
     root: None
     category: data_file
     props:
-      - name: id
       - name: object_id
       - name: md5sum
       - name: data_file_name
