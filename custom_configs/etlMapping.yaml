@@ -23,8 +23,8 @@ mappings:
           - name: file_id
             src: id
             fn: set
-          - name: file_path
-            src: file_path
+          - name: data_file_name
+            src: data_file_name
             fn: set
   - name: study_file
     doc_type: file
