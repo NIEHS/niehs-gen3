@@ -1,21 +1,19 @@
 mappings:
-  - name: publication_etl
-    doc_type: publication
+  - name: study_etl
+    doc_type: study
     type: aggregator
-    root: publication
+    root: study
     props:
       - name: project_id
       - name: submitter_id
-      - name: pmid
-      - name: doi
-      - name: title
+      - name: id_acc_number
     aggregated_props:
-      - name: _p03_non_neoplastic_charts_count
-        path: p03_non_neoplastic_charts
+      - name: _microarray_data_files_count
+        path: microarray_data_files
         fn: count
     parent_props:
       - path: projects[project_code:code,project_name:name]
-  - name: publication_file
+  - name: study_file
     doc_type: file
     type: collector
     root: None

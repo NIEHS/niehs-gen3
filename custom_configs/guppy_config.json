@@ -1,11 +1,11 @@
 {
     "indices": [
         {
-            "index": "publication_etl",
-            "type": "publication"
+            "index": "study_etl",
+            "type": "study"
         },
         {
-            "index": "publication_file",
+            "index": "study_file",
             "type": "file"
         }
     ],
