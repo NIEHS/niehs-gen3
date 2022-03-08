@@ -21,7 +21,7 @@ mappings:
             src: data_format
             fn: set
           - name: file_id
-            src: file_id
+            src: id
             fn: set
           - name: file_path
             src: file_path

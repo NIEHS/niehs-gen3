@@ -103,12 +103,16 @@
         "publication_id": {
           "chartType": "bar",
           "title": "Publications"
+        },
+        "study_id": {
+          "chartType": "bar",
+          "title": "Studies"
         }
       },
       "filters": {
         "tabs": [
           {
-            "title": "Publications",
+            "title": "Studies",
             "fields": [
               "publication-id",
               "title"
