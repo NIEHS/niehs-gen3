@@ -1,7 +1,23 @@
 {
   "graphql": {
-    "boardCounts": [],
-    "chartCounts": [],
+    "boardCounts": [
+      {
+        "graphql": "_study_count",
+        "name": "Study",
+        "plural": "Studies"
+      },
+      {
+        "graphql": "_microarray_data_files_count",
+        "name": "Microarray",
+        "plural": "Microarrays"
+      }
+    ],
+    "chartCounts": [
+      {
+        "graphql": "_study_count",
+        "name": "Study"
+      }
+    ],
     "projectDetails": "boardCounts"
   },
   "components": {
@@ -92,7 +108,9 @@
       "email": "mike.conway@nih.gov"
     },
     "featureFlags": {
-      "explorer": true
+      "explorer": true,
+      "explorerPublic": true,
+      "discovery": false
     },
     "dataExplorerConfig": {
       "charts": {
@@ -114,18 +132,10 @@
           {
             "title": "Studies",
             "fields": [
-              "publication-id",
-              "title"
+              "species",
+              "chemical"
             ]
           }
-        ]
-      },
-      "table": {
-        "enabled": true,
-        "fields": [
-          "project_id",
-          "publication-id",
-          "title"
         ]
       },
       "buttons": [
@@ -138,8 +148,8 @@
         }
       ],
       "guppyConfig": {
-        "dataType": "publication",
-        "nodeCountTitle": "Publications",
+        "dataType": "file",
+        "nodeCountTitle": "Files",
         "fieldMapping": [],
         "manifestMapping": {
           "resourceIndexType": "file",
