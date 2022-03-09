@@ -20,9 +20,6 @@ mappings:
           - name: data_format
             src: data_format
             fn: set
-          - name: file_id
-            src: id
-            fn: set
           - name: data_file_name
             src: data_file_name
             fn: set
