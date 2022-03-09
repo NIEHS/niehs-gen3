@@ -110,7 +110,7 @@
     "dataExplorerConfig": {
       "charts": {
         "species": {
-          "chartType": "bar",
+          "chartType": "count",
           "title": "Species"
         },
         "chemical": {
