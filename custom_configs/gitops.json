@@ -2,11 +2,6 @@
   "graphql": {
     "boardCounts": [
       {
-        "graphql": "_study_count",
-        "name": "Study",
-        "plural": "Studies"
-      },
-      {
         "graphql": "_microarray_data_files_count",
         "name": "Microarray",
         "plural": "Microarrays"
@@ -14,8 +9,8 @@
     ],
     "chartCounts": [
       {
-        "graphql": "_study_count",
-        "name": "Study"
+        "graphql": "_microarray_data_files_count",
+        "name": "Microarray"
       }
     ],
     "projectDetails": "boardCounts"
@@ -114,23 +109,19 @@
     },
     "dataExplorerConfig": {
       "charts": {
-        "project_id": {
+        "species": {
           "chartType": "count",
-          "title": "Projects"
+          "title": "Species"
         },
-        "publication_id": {
+        "chemical": {
           "chartType": "bar",
-          "title": "Publications"
-        },
-        "study_id": {
-          "chartType": "bar",
-          "title": "Studies"
+          "title": "Chemical"
         }
       },
       "filters": {
         "tabs": [
           {
-            "title": "Studies",
+            "title": "Microarray Data",
             "fields": [
               "species",
               "chemical"
@@ -148,14 +139,14 @@
         }
       ],
       "guppyConfig": {
-        "dataType": "file",
-        "nodeCountTitle": "Files",
+        "dataType": "study",
+        "nodeCountTitle": "Studies",
         "fieldMapping": [],
         "manifestMapping": {
           "resourceIndexType": "file",
           "resourceIdField": "object_id",
-          "referenceIdFieldInResourceIndex": "publication_id",
-          "referenceIdFieldInDataIndex": "publication_id"
+          "referenceIdFieldInResourceIndex": "study_id",
+          "referenceIdFieldInDataIndex": "study_id"
         }
       }
     }
