@@ -1,18 +1,7 @@
 {
   "graphql": {
-    "boardCounts": [
-      {
-        "graphql": "_microarray_data_files_count",
-        "name": "Microarray",
-        "plural": "Microarrays"
-      }
-    ],
-    "chartCounts": [
-      {
-        "graphql": "_microarray_data_files_count",
-        "name": "Microarray"
-      }
-    ],
+    "boardCounts": [],
+    "chartCounts": [],
     "projectDetails": "boardCounts"
   },
   "components": {
@@ -103,30 +92,40 @@
       "email": "mike.conway@nih.gov"
     },
     "featureFlags": {
-      "explorer": true,
-      "explorerPublic": true,
-      "discovery": false
+      "explorer": true
     },
     "dataExplorerConfig": {
       "charts": {
-        "species": {
+        "project_id": {
           "chartType": "count",
-          "title": "Species"
+          "title": "Projects"
         },
-        "chemical": {
+        "publication_id": {
           "chartType": "bar",
-          "title": "Chemical"
+          "title": "Publications"
+        },
+        "study_id": {
+          "chartType": "bar",
+          "title": "Studies"
         }
       },
       "filters": {
         "tabs": [
           {
-            "title": "Microarray Data",
+            "title": "Studies",
             "fields": [
-              "species",
-              "chemical"
+              "publication-id",
+              "title"
             ]
           }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "fields": [
+          "project_id",
+          "publication-id",
+          "title"
         ]
       },
       "buttons": [
@@ -139,14 +138,14 @@
         }
       ],
       "guppyConfig": {
-        "dataType": "study",
-        "nodeCountTitle": "Studies",
+        "dataType": "publication",
+        "nodeCountTitle": "Publications",
         "fieldMapping": [],
         "manifestMapping": {
           "resourceIndexType": "file",
           "resourceIdField": "object_id",
-          "referenceIdFieldInResourceIndex": "study_id",
-          "referenceIdFieldInDataIndex": "study_id"
+          "referenceIdFieldInResourceIndex": "publication_id",
+          "referenceIdFieldInDataIndex": "publication_id"
         }
       }
     }
