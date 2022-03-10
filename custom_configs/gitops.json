@@ -2,12 +2,21 @@
   "graphql": {
     "boardCounts": [
       {
+        "graphql": "_study_count",
+        "name": "Study",
+        "plural": "Studies"
+      },
+      {
         "graphql": "_microarray_data_files_count",
         "name": "Microarray",
         "plural": "Microarrays"
       }
     ],
     "chartCounts": [
+      {
+        "graphql": "_study_count",
+        "name": "Study"
+      },
       {
         "graphql": "_microarray_data_files_count",
         "name": "Microarray"
@@ -109,8 +118,12 @@
     },
     "dataExplorerConfig": {
       "charts": {
-        "species": {
+        "project_id": {
           "chartType": "count",
+          "title": "Projects"
+        },
+        "species": {
+          "chartType": "bar",
           "title": "Species"
         },
         "chemical": {
@@ -121,12 +134,21 @@
       "filters": {
         "tabs": [
           {
-            "title": "Microarray Data",
+            "title": "Study",
             "fields": [
+              "project_id",
               "species",
               "chemical"
             ]
           }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "fields": [
+          "project_id",
+          "data_format",
+          "data_type"
         ]
       },
       "buttons": [
