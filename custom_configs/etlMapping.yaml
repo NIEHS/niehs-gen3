@@ -7,7 +7,8 @@ mappings:
       - name: project_id
       - name: submitter_id
       - name: id_acc_number
-
+      - name: species
+      -name: chemical
     aggregated_props:
       - name: _microarray_data_files_count
         path: microarray_data_files
