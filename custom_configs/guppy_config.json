@@ -9,6 +9,6 @@
             "type": "file"
         }
     ],
-    "config_index": "etl_array-config",
+    "config_index": "study_file-array-config_0",
     "auth_filter_field": "auth_resource_path"
 }
