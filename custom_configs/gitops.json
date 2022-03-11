@@ -110,66 +110,66 @@
       "text": "NIEHS Data Commons Proof of Concept",
       "contact": "If you have any questions about access or the registration process, please contact ",
       "email": "mike.conway@nih.gov"
+    }
+  },
+  "featureFlags": {
+    "explorer": true,
+    "explorerPublic": true,
+    "discovery": false
+  },
+  "dataExplorerConfig": {
+    "charts": {
+      "project_id": {
+        "chartType": "count",
+        "title": "Projects"
+      },
+      "species": {
+        "chartType": "bar",
+        "title": "Species"
+      },
+      "chemical": {
+        "chartType": "bar",
+        "title": "Chemical"
+      }
     },
-    "featureFlags": {
-      "explorer": true,
-      "explorerPublic": true,
-      "discovery": false
-    },
-    "dataExplorerConfig": {
-      "charts": {
-        "project_id": {
-          "chartType": "count",
-          "title": "Projects"
-        },
-        "species": {
-          "chartType": "bar",
-          "title": "Species"
-        },
-        "chemical": {
-          "chartType": "bar",
-          "title": "Chemical"
-        }
-      },
-      "filters": {
-        "tabs": [
-          {
-            "title": "Study",
-            "fields": [
-              "project_id",
-              "species",
-              "chemical"
-            ]
-          }
-        ]
-      },
-      "table": {
-        "enabled": true,
-        "fields": [
-          "project_id",
-          "data_format",
-          "data_type"
-        ]
-      },
-      "buttons": [
+    "filters": {
+      "tabs": [
         {
-          "enabled": true,
-          "type": "export-to-workspace",
-          "title": "Export to Workspace",
-          "leftIcon": "datafile",
-          "rightIcon": "external-link"
+          "title": "Study",
+          "fields": [
+            "project_id",
+            "species",
+            "chemical"
+          ]
         }
-      ],
-      "guppyConfig": {
-        "dataType": "study",
-        "nodeCountTitle": "Studies",
-        "fieldMapping": [],
-        "manifestMapping": {
-          "resourceIndexType": "file",
-          "resourceIdField": "object_id",
-          "referenceIdFieldInResourceIndex": "study_id",
-          "referenceIdFieldInDataIndex": "study_id"
-        }
+      ]
+    },
+    "table": {
+      "enabled": true,
+      "fields": [
+        "project_id",
+        "data_format",
+        "data_type"
+      ]
+    },
+    "buttons": [
+      {
+        "enabled": true,
+        "type": "export-to-workspace",
+        "title": "Export to Workspace",
+        "leftIcon": "datafile",
+        "rightIcon": "external-link"
+      }
+    ],
+    "guppyConfig": {
+      "dataType": "study",
+      "nodeCountTitle": "Studies",
+      "fieldMapping": [],
+      "manifestMapping": {
+        "resourceIndexType": "file",
+        "resourceIdField": "object_id",
+        "referenceIdFieldInResourceIndex": "study_id",
+        "referenceIdFieldInDataIndex": "study_id"
       }
     }
   }
