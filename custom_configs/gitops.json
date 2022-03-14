@@ -168,8 +168,8 @@
       "manifestMapping": {
         "resourceIndexType": "file",
         "resourceIdField": "object_id",
-        "referenceIdFieldInResourceIndex": "study_id",
-        "referenceIdFieldInDataIndex": "study_id"
+        "referenceIdFieldInResourceIndex": "_study_id",
+        "referenceIdFieldInDataIndex": "_study_id"
       }
     }
   }
