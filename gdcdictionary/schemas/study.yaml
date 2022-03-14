@@ -34,6 +34,8 @@ required:
   - type
   - study_description
   - projects
+  - chemical
+  - id_acc_number
 
 uniqueKeys:
   - [id]
@@ -49,8 +51,8 @@ properties:
 
   title:
     description: Study name
-    type: string   
-  
+    type: string
+
   study_classification:
     description: or experiment_type.type of study protocol
     type: string
@@ -59,21 +61,9 @@ properties:
     description: Author
     type: string
 
-  species:
-    description: in vivo, invitro (??)
-    type: string
-
   chemical:
     description: study chemical compound
     type: array
-
-  cell_line:
-    description: cell lines for the study
-    type: array
-
-  study_intervention:
-    description: intervention
-    type: string
 
   data_description:
     description: Brief description of the data being provided for this study.
@@ -82,20 +72,6 @@ properties:
   experiment_type:
     description: also called classification. General strategy used for differential analysis
     type: string
-
-  is_clinical_trial:
-    description: Flag that indicates whether this is a clinical trial study
-    type: boolean
-
-  study_completeness:
-    description: Description of data status. 0=Descriptive data and results as originally
-      received from the data provider. 1=Includes updates to the original data submission
-      short of completeness. 2=Complete set of descriptive data and results, as ascertained
-      by curator.
-    enum:
-      - '0'
-      - '1'
-      - '2'
 
   study_description:
     description: A brief description of the study being performed. Free text

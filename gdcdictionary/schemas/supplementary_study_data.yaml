@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "microarray_data_file"
-title: Data from microarray study
+id: "supplementary_study_data_file"
+title: Supplementary_study_data_file
 type: object
 namespace: http://ntp.niehs.nih.gov/cebs
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data from microarray study
+  Supplementary data from a CEBS study
 additionalProperties: true
 submittable: true
 validators: null
@@ -27,7 +27,7 @@ links:
     required: true
     subgroup:
       - name: studies
-        backref: microarray_data_files
+        backref: supplementary_study_data_files
         label: data_from
         target_type: study
         multiplicity: many_to_one
@@ -43,8 +43,6 @@ required:
   - subject_id
   - tissue
   - test_article
-  - species_and_strain
-  - data_format
 
 uniqueKeys:
   - [ id ]
@@ -57,26 +55,10 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Microarray Data File
-
-  subject_id:
-    description: animal id
-    type: string
+      - Supplementary Study Data File
 
   data_file_name:
-    description: data file GEO accession
-    type: string
-
-  test_article:
-    description: test article
-    type: string
-
-  tissue:
-   description: tissue type
-   type: string
-
-  species_and_strain:
-    description: species and strain as a concatenated item
+    description: data file name
     type: string
 
   data_format:
