@@ -33,6 +33,8 @@ required:
   - submitter_id
   - studies
   - type
+  - species
+  - strain
 
 uniqueKeys:
   - [id]
