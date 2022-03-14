@@ -26,10 +26,10 @@ links:
   - exclusive: false
     required: true
     subgroup:
-      - name: studies
+      - name: subjects
         backref: microarray_data_files
         label: data_from
-        target_type: study
+        target_type: subject
         multiplicity: many_to_one
         required: false
       - name: core_metadata_collections
@@ -89,7 +89,7 @@ properties:
       Specific content type of the data file.
     type: string
 
-  studies:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
 
   core_metadata_collections:
