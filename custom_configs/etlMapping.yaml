@@ -8,7 +8,7 @@ mappings:
       - name: submitter_id
       - name: id_acc_number
       - name: species
-      -name: chemical
+      - name: chemical
     aggregated_props:
       - name: _microarray_data_files_count
         path: microarray_data_files
@@ -21,6 +21,9 @@ mappings:
         props:
           - name: data_format
             src: data_format
+            fn: set
+          - name: data_type
+            src: data_type
             fn: set
           - name: data_file_name
             src: data_file_name
