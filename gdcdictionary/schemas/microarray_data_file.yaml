@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "microarray_data_file"
 title: Data from microarray study
 type: object
-namespace: http://ntp.niehs.nih.gov/cebs
+namespace: http://ntp.niehs.nih.gov/cebs/
 category: data_file
 program: '*'
 project: '*'

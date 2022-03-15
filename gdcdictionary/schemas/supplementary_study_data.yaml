@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "supplementary_study_data_file"
 title: Supplementary_study_data_file
 type: object
-namespace: http://ntp.niehs.nih.gov/cebs
+namespace: http://ntp.niehs.nih.gov/cebs/
 category: data_file
 program: '*'
 project: '*'
@@ -40,7 +40,6 @@ links:
         required: false
 
 required:
-  - subject_id
   - supplementary_file_title
 
 uniqueKeys:
