@@ -242,13 +242,11 @@
         "fieldMapping": [
         ],
         "manifestMapping": {
-          "resourceIndexType": "imaging_data_file",
+          "resourceIndexType": "study_file",
           "resourceIdField": "object_id",
-          "referenceIdFieldInResourceIndex": "_dataset_id",
-          "referenceIdFieldInDataIndex": "_dataset_id"
-        },
-        "accessibleFieldCheckList": ["project_id"],
-        "accessibleValidationField": "project_id"
+          "referenceIdFieldInResourceIndex": "_study_id",
+          "referenceIdFieldInDataIndex": "_study_id"
+        }
       }
     }
   ]
