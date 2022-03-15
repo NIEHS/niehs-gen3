@@ -6,18 +6,15 @@ mappings:
     props:
       - name: project_id
       - name: submitter_id
-      - name: id_acc_number
-      - name: species
-      - name: chemical
     aggregated_props:
-      - name: _microarray_data_files_count
-        path: microarray_data_files_files
+      - name: _supplementary_study_data_files_count
+        path: supplementary_study_data_files
         fn: count
     parent_props:
       - path: projects[project_code:code,project_name:name]
     joining_props:
       - index: file
-        join_on: _study_id
+        join_on: study_id
         props:
           - name: data_format
             src: data_format
@@ -43,7 +40,57 @@ mappings:
     injecting_props:
       study:
         props:
-          - name: _study_id
+          - name: study_id
+            src: id
+            fn: set
+          - name: submitter_id
+            src: submitter_id
+            fn: set
+          - name: project_id
+            src: project_id
+            fn: set
+  - name: subject_etl
+    doc_type: subject
+    type: aggregator
+    root: subject
+    props:
+      - name: project_id
+      - name: submitter_id
+    aggregated_props:
+      - name: _microarray_data_files_count
+        path: microarray_data_files_files
+        fn: count
+    parent_props:
+      - path: projects[project_code:code,project_name:name]
+    joining_props:
+      - index: file
+        join_on: subject_id
+        props:
+          - name: data_format
+            src: data_format
+            fn: set
+          - name: data_type
+            src: data_type
+            fn: set
+          - name: data_file_name
+            src: data_file_name
+            fn: set
+  - name: subject_file
+    doc_type: file
+    type: collector
+    root: None
+    category: data_file
+    props:
+      - name: object_id
+      - name: md5sum
+      - name: data_file_name
+      - name: file_size
+      - name: data_format
+      - name: data_type
+    injecting_props:
+      study:
+        props:
+          - name: subject_id
             src: id
             fn: set
           - name: submitter_id

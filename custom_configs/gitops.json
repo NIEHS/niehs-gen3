@@ -7,7 +7,12 @@
         "plural": "Studies"
       },
       {
-        "graphql": "_microarray_data_file_count",
+        "graphql": "_supplementary_study_data_files_count",
+        "name": "Supplementary Data",
+        "plural": "Supplementary Data"
+      },
+      {
+        "graphql": "_microarray_data_files_count",
         "name": "Microarray Data",
         "plural": "Microarray Data"
       }
@@ -18,7 +23,11 @@
         "name": "Study"
       },
       {
-        "graphql": "_microarray_data_file_count",
+        "graphql": "_supplementary_study_data_files_count",
+        "name": "Supplementary Data"
+      },
+      {
+        "graphql": "_microarray_data_files_count",
         "name": "Microarray Data"
       }
     ],
