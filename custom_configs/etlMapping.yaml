@@ -58,7 +58,7 @@ mappings:
       - name: submitter_id
     aggregated_props:
       - name: _microarray_data_files_count
-        path: microarray_data_files_files
+        path: microarray_data_files
         fn: count
     parent_props:
       - path: projects[project_code:code,project_name:name]
