@@ -41,8 +41,7 @@ links:
 
 required:
   - subject_id
-  - tissue
-  - test_article
+  - supplementary_file_title
 
 uniqueKeys:
   - [ id ]
@@ -70,6 +69,10 @@ properties:
     description: >
       Specific content type of the data file.
     type: string
+
+  supplementary_file_title:
+    description: data file descriptive title
+      type: string
 
   studies:
     $ref: "_definitions.yaml#/to_one"
