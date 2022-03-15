@@ -7,8 +7,16 @@
         {
             "index": "study_file",
             "type": "file"
+        },
+        {
+            "index": "subject_etl",
+            "type": "subject"
+        },
+        {
+            "index": "subject_file",
+            "type": "file"
         }
     ],
-    "config_index": "study_file-array-config_0",
+    "config_index": "study_file-array-config_0, subject_file-array-config_0",
     "auth_filter_field": "auth_resource_path"
 }
