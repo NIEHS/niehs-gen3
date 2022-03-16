@@ -5,21 +5,12 @@
         "graphql": "_study_count",
         "name": "Study",
         "plural": "Studies"
-      },
-      {
-        "graphql": "_microarray_data_files_count",
-        "name": "Microarray Data",
-        "plural": "Microarray Data"
       }
     ],
     "chartCounts": [
       {
         "graphql": "_study_count",
         "name": "Study"
-      },
-      {
-        "graphql": "_microarray_data_files_count",
-        "name": "Microarray Data"
       }
     ],
     "projectDetails": "boardCounts"
