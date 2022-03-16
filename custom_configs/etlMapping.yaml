@@ -13,7 +13,7 @@ mappings:
     parent_props:
       - path: projects[project_code:code,project_name:name]
     joining_props:
-      - index: file
+      - index: data_file
         join_on: _study_id
         props:
           - name: data_format
@@ -63,7 +63,7 @@ mappings:
     parent_props:
       - path: studies.projects[project_code:code,project_name:name]
     joining_props:
-      - index: file
+      - index: microarray_data_file
         join_on: _subject_id
         props:
           - name: data_format
@@ -79,7 +79,7 @@ mappings:
     doc_type: file
     type: collector
     root: None
-    category: data_file
+    category: microarray_data_file
     props:
       - name: object_id
       - name: md5sum

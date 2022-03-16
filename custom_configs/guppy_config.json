@@ -6,7 +6,7 @@
         },
         {
             "index": "study_file",
-            "type": "file"
+            "type": "data_file"
         },
         {
             "index": "subject_etl",
@@ -14,7 +14,7 @@
         },
         {
             "index": "subject_file",
-            "type": "file"
+            "type": "microarray_data_file"
         }
     ],
     "config_index": "study_file-array-config_0, subject_file-array-config_0",
