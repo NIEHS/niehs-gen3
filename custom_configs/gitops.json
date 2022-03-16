@@ -7,11 +7,6 @@
         "plural": "Studies"
       },
       {
-        "graphql": "_supplementary_study_data_files_count",
-        "name": "Supplementary Data",
-        "plural": "Supplementary Data"
-      },
-      {
         "graphql": "_microarray_data_files_count",
         "name": "Microarray Data",
         "plural": "Microarray Data"
@@ -21,10 +16,6 @@
       {
         "graphql": "_study_count",
         "name": "Study"
-      },
-      {
-        "graphql": "_supplementary_study_data_files_count",
-        "name": "Supplementary Data"
       },
       {
         "graphql": "_microarray_data_files_count",
@@ -237,12 +228,12 @@
       ],
       "loginForDownload": true,
       "guppyConfig": {
-        "dataType": "dataset",
+        "dataType": "data_file",
         "nodeCountTitle": "Datasets",
         "fieldMapping": [
         ],
         "manifestMapping": {
-          "resourceIndexType": "study_file",
+          "resourceIndexType": "study",
           "resourceIdField": "object_id",
           "referenceIdFieldInResourceIndex": "_study_id",
           "referenceIdFieldInDataIndex": "_study_id"
