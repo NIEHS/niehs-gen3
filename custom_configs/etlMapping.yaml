@@ -26,7 +26,7 @@ mappings:
             src: data_file_name
             fn: set
   - name: study_file
-    doc_type: file
+    doc_type: data_file
     type: collector
     root: None
     category: data_file
