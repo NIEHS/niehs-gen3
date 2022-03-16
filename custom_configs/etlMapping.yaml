@@ -26,8 +26,8 @@ mappings:
           - name: data_type
             src: data_type
             fn: set
-          - name: data_file_name
-            src: data_file_name
+          - name: file_name
+            src: file_name
             fn: set
 
   - name: study_file
@@ -38,7 +38,7 @@ mappings:
     props:
       - name: object_id
       - name: md5sum
-      - name: data_file_name
+      - name: file_name
       - name: file_size
       - name: data_format
       - name: data_type
