@@ -76,7 +76,7 @@ mappings:
             src: data_file_name
             fn: set
   - name: subject_file
-    doc_type: file
+    doc_type: microarray_data_file
     type: collector
     root: None
     category: microarray_data_file
