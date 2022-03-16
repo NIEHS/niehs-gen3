@@ -149,7 +149,14 @@
       "fields": [
         "project_id",
         "data_format",
-        "data_type"
+        "data_type",
+        "_study_id",
+        "submitter_id",
+        "species",
+        "study_doi"
+      ],
+      "linkFields": [
+        "study_doi"
       ]
     },
     "buttons": [

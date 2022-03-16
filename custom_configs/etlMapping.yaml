@@ -9,6 +9,7 @@ mappings:
       - name: id_acc_number
       - name: species
       - name: chemical
+      - name: study_doi
     aggregated_props:
       - name: _microarray_data_files_count
         path: microarray_data_files
@@ -28,6 +29,7 @@ mappings:
           - name: data_file_name
             src: data_file_name
             fn: set
+
   - name: study_file
     doc_type: file
     type: collector
