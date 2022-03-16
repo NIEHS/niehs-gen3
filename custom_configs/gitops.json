@@ -117,6 +117,73 @@
     "explorerPublic": true,
     "discovery": false
   },
+  "fileExplorerConfig": {
+    "charts": {
+      "data_type": {
+        "chartType": "stackedBar",
+        "title": "File Type"
+      },
+      "data_format": {
+        "chartType": "stackedBar",
+        "title": "File Format"
+      }
+    },
+    "filters": {
+      "tabs": [
+        {
+          "title": "File",
+          "fields": [
+            "project_id",
+            "data_type",
+            "data_format"
+          ]
+        }
+      ]
+    },
+    "table": {
+      "enabled": true,
+      "fields": [
+        "project_id",
+        "file_name",
+        "file_size",
+        "tissue",
+        "test_article",
+        "object_id"
+      ]
+    },
+    "guppyConfig": {
+      "dataType": "study_file",
+      "fieldMapping": [
+        {
+          "field": "object_id",
+          "name": "GUID"
+        }
+      ],
+      "nodeCountTitle": "Files",
+      "manifestMapping": {
+        "resourceIndexType": "study",
+        "resourceIdField": "_study_id",
+        "referenceIdFieldInResourceIndex": "object_id",
+        "referenceIdFieldInDataIndex": "object_id"
+      },
+      "accessibleFieldCheckList": [
+        "project_id"
+      ],
+      "accessibleValidationField": "project_id",
+      "downloadAccessor": "object_id"
+    },
+    "buttons": [
+      {
+        "enabled": true,
+        "type": "file-manifest",
+        "title": "Download Manifest",
+        "leftIcon": "datafile",
+        "rightIcon": "download",
+        "fileName": "file-manifest.json"
+      }
+    ],
+    "dropdowns": {}
+  },
   "dataExplorerConfig": {
     "charts": {
       "project_id": {
