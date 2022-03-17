@@ -148,7 +148,7 @@
       "enabled": true,
       "fields": [
         "project_id",
-        "file_name",
+        "data_file_name",
         "file_size",
         "tissue",
         "test_article",
