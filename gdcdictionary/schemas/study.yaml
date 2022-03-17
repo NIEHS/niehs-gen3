@@ -35,9 +35,6 @@ required:
   - study_description
   - projects
   - species
-  - gender
-  - chemical
-  - study_type
 
 uniqueKeys:
   - [id]

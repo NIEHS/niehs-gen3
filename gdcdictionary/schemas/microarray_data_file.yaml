@@ -43,9 +43,6 @@ required:
   - subject_id
   - tissue
   - test_article
-  - assay_type
-  - dose
-  - geo_doi
 
 uniqueKeys:
   - [ id ]
