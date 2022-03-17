@@ -120,6 +120,14 @@
       "data_format": {
         "chartType": "stackedBar",
         "title": "File Format"
+      },
+      "assay_type": {
+        "chartType": "stackedBar",
+        "title": "assay"
+      },
+      "tissue": {
+        "chartType": "stackedBar",
+        "title": "tissue"
       }
     },
     "filters": {
@@ -129,7 +137,9 @@
           "fields": [
             "project_id",
             "data_type",
-            "data_format"
+            "data_format",
+            "assay_type",
+            "tissue"
           ]
         }
       ]
@@ -142,7 +152,13 @@
         "file_size",
         "tissue",
         "test_article",
+        "assay_type",
+        "dose",
+        "geo_doi",
         "object_id"
+      ],
+      "linkFields": [
+        "geo_doi"
       ]
     },
     "guppyConfig": {
