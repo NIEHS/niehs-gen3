@@ -51,6 +51,7 @@ mappings:
       - name: test_article
       - name: dose
       - name: geo_doi
+      - name: assay_type
     injecting_props:
       study:
         props:
