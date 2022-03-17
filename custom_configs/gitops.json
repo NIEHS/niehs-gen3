@@ -48,6 +48,13 @@
           "label": "Explore data"
         },
         {
+          "name": "Discover Study Metadata",
+          "icon": "data-explore",
+          "body": "Discover study descriptions and other metadata stored on the Data Commons",
+          "link": "/discovery",
+          "label": "Discover Study Metadata"
+        },
+        {
           "name": "Access Data",
           "icon": "data-access",
           "body": "Use our selected tool to filter out the data you need.",
@@ -110,6 +117,94 @@
     "explorer": true,
     "explorerPublic": true,
     "discovery": false
+  },
+  "discoveryConfig": {
+    "features": {
+      "pageTitle": {
+        "enabled": false
+      },
+      "search": {
+        "searchBar": {
+          "enabled": true
+        }
+      },
+      "authorization": {
+        "enabled": false
+      }
+    },
+    "aggregations": [
+      {
+        "name": "Studies",
+        "field": "id_acc_number",
+        "type": "count"
+      }
+    ],
+    "tagSelector": {
+      "title": "Tags by category"
+    },
+    "studyColumns": [
+      {
+        "name": "Accession Number",
+        "field": "id_acc_number"
+      },
+      {
+        "name": "Study Title",
+        "field": "title"
+      },
+      {
+        "name": "DOI",
+        "field": "study_doi"
+      }
+    ],
+    "studyPreviewField": {
+      "name": "Summary",
+      "field": "study_description",
+      "contentType": "string",
+      "includeName": false,
+      "includeIfNotAvailable": true,
+      "valueIfNotAvailable": "No summary has been provided for this study."
+    },
+    "studyPageFields": {
+      "header": {
+        "field": "title"
+      },
+      "fieldsToShow": [
+        {
+          "groupName": "OADC studies",
+          "includeName": false,
+          "fields": [
+            {
+              "name": "Accession Number",
+              "field": "id_acc_number"
+            },
+            {
+              "name": "Study Title",
+              "field": "title"
+            },
+            {
+              "name": "Link",
+              "field": "study_doi"
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "name": "Summary",
+              "field": "study_description",
+              "contentType": "paragraphs",
+              "includeName": true,
+              "includeIfNotAvailable": true,
+              "valueIfNotAvailable": "No summary has been provided for this study."
+            }
+          ]
+        }
+      ]
+    },
+    "minimalFieldMapping": {
+      "tagsListFieldName": "tags",
+      "uid": "id_acc_number"
+    }
   },
   "fileExplorerConfig": {
     "charts": {
