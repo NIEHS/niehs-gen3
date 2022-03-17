@@ -60,6 +60,9 @@ properties:
     description: animal id
     type: string
 
+  geo_doi:
+    type: string
+
   data_file_name:
     description: data file GEO accession
     type: string
@@ -76,10 +79,16 @@ properties:
    description: tissue type
    type: string
 
+  assay_type:
+    type: string
+
+  dose:
+    type: string
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
-    type: string 
+    type: string
 
   data_type:
     description: >

@@ -9,6 +9,11 @@ mappings:
       - name: id_acc_number
       - name: species
       - name: chemical
+      - name: study_doi
+      - name: study_description
+      - name: title
+      - name: gender
+      - name: study_type
     aggregated_props:
       - name: _microarray_data_files_count
         path: microarray_data_files
@@ -28,6 +33,7 @@ mappings:
           - name: data_file_name
             src: data_file_name
             fn: set
+
   - name: study_file
     doc_type: file
     type: collector
@@ -43,6 +49,9 @@ mappings:
       - name: state
       - name: tissue
       - name: test_article
+      - name: dose
+      - name: geo_doi
+      - name: assay_type
     injecting_props:
       study:
         props:

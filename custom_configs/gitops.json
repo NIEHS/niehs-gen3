@@ -79,12 +79,6 @@
           "name": "Exploration"
         },
         {
-          "icon": "files",
-          "link": "/files",
-          "color": "#a2a2a2",
-          "name": "Files"
-        },
-        {
           "icon": "query",
           "link": "/query",
           "color": "#a2a2a2",
@@ -117,6 +111,89 @@
     "explorerPublic": true,
     "discovery": false
   },
+  "fileExplorerConfig": {
+    "charts": {
+      "data_type": {
+        "chartType": "stackedBar",
+        "title": "File Type"
+      },
+      "data_format": {
+        "chartType": "stackedBar",
+        "title": "File Format"
+      },
+      "assay_type": {
+        "chartType": "stackedBar",
+        "title": "assay"
+      },
+      "tissue": {
+        "chartType": "stackedBar",
+        "title": "tissue"
+      }
+    },
+    "filters": {
+      "tabs": [
+        {
+          "title": "File",
+          "fields": [
+            "project_id",
+            "data_type",
+            "data_format",
+            "assay_type",
+            "tissue"
+          ]
+        }
+      ]
+    },
+    "table": {
+      "enabled": true,
+      "fields": [
+        "project_id",
+        "data_file_name",
+        "file_size",
+        "tissue",
+        "test_article",
+        "assay_type",
+        "dose",
+        "geo_doi",
+        "object_id"
+      ],
+      "linkFields": [
+        "geo_doi"
+      ]
+    },
+    "guppyConfig": {
+      "dataType": "file",
+      "fieldMapping": [
+        {
+          "field": "object_id",
+          "name": "GUID"
+        }
+      ],
+      "nodeCountTitle": "Files",
+      "manifestMapping": {
+        "resourceIndexType": "study",
+        "resourceIdField": "_study_id",
+        "referenceIdFieldInResourceIndex": "object_id",
+        "referenceIdFieldInDataIndex": "object_id"
+      },
+      "accessibleFieldCheckList": [
+        "project_id"
+      ],
+      "accessibleValidationField": "project_id",
+      "downloadAccessor": "object_id"
+    },
+    "buttons": [
+      {
+        "enabled": true,
+        "type": "file-manifest",
+        "title": "Download Manifest",
+        "leftIcon": "datafile",
+        "rightIcon": "download",
+        "fileName": "file-manifest.json"
+      }
+    ],
+    "dropdowns": {}
+  },
   "dataExplorerConfig": {
     "charts": {
       "project_id": {
@@ -139,7 +216,9 @@
           "fields": [
             "project_id",
             "species",
-            "chemical"
+            "chemical",
+            "study_type",
+            "gender"
           ]
         }
       ]
@@ -149,7 +228,17 @@
       "fields": [
         "project_id",
         "data_format",
-        "data_type"
+        "data_type",
+        "_study_id",
+        "submitter_id",
+        "species",
+        "gender",
+        "study_type",
+        "study_doi",
+        "id_acc_number"
+      ],
+      "linkFields": [
+        "study_doi", "id_acc_number"
       ]
     },
     "buttons": [
