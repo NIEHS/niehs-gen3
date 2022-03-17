@@ -7,6 +7,8 @@ mappings:
       - name: project_id
       - name: submitter_id
       - name: id_acc_number
+      - name: title
+      - name: study_description
       - name: species
       - name: chemical
       - name: study_doi
