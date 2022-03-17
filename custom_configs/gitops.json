@@ -216,7 +216,9 @@
           "fields": [
             "project_id",
             "species",
-            "chemical"
+            "chemical",
+            "study_type",
+            "gender"
           ]
         }
       ]
@@ -230,10 +232,13 @@
         "_study_id",
         "submitter_id",
         "species",
-        "study_doi"
+        "gender",
+        "study_type",
+        "study_doi",
+        "id_acc_number"
       ],
       "linkFields": [
-        "study_doi"
+        "study_doi", "id_acc_number"
       ]
     },
     "buttons": [
