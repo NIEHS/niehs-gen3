@@ -10,6 +10,10 @@ mappings:
       - name: species
       - name: chemical
       - name: study_doi
+      - name: study_description
+      - name: title
+      - name: gender
+      - name: study_type
     aggregated_props:
       - name: _microarray_data_files_count
         path: microarray_data_files
@@ -26,8 +30,8 @@ mappings:
           - name: data_type
             src: data_type
             fn: set
-          - name: file_name
-            src: file_name
+          - name: data_file_name
+            src: data_file_name
             fn: set
 
   - name: study_file
@@ -38,13 +42,15 @@ mappings:
     props:
       - name: object_id
       - name: md5sum
-      - name: file_name
+      - name: data_file_name
       - name: file_size
       - name: data_format
       - name: data_type
       - name: state
       - name: tissue
       - name: test_article
+      - name: dose
+      - name: geo_doi
     injecting_props:
       study:
         props:
