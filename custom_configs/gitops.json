@@ -329,6 +329,9 @@
         }
       }
     }
+  ],
+  "connectSrcCSPWhitelist": [
+    "https://ehsodslp02.niehs.nih.gov"
   ]
 }
 
