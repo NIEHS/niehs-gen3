@@ -194,72 +194,142 @@
     ],
     "dropdowns": {}
   },
-  "dataExplorerConfig": {
-    "charts": {
-      "project_id": {
-        "chartType": "count",
-        "title": "Projects"
-      },
-      "species": {
-        "chartType": "bar",
-        "title": "Species"
-      },
-      "chemical": {
-        "chartType": "bar",
-        "title": "Chemical"
-      }
-    },
-    "filters": {
-      "tabs": [
-        {
-          "title": "Study",
-          "fields": [
-            "project_id",
-            "species",
-            "chemical",
-            "study_type",
-            "gender"
-          ]
+  "explorerConfig": [
+    {
+      "tabTitle": "Microarray Data",
+      "charts": {
+        "project_id": {
+          "chartType": "count",
+          "title": "Projects"
+        },
+        "species": {
+          "chartType": "bar",
+          "title": "Species"
+        },
+        "chemical": {
+          "chartType": "bar",
+          "title": "Chemical"
         }
-      ]
-    },
-    "table": {
-      "enabled": true,
-      "fields": [
-        "project_id",
-        "data_format",
-        "data_type",
-        "_study_id",
-        "submitter_id",
-        "species",
-        "gender",
-        "study_type",
-        "study_doi",
-        "id_acc_number"
-      ],
-      "linkFields": [
-        "study_doi", "id_acc_number"
-      ]
-    },
-    "buttons": [
-      {
+      },
+      "filters": {
+        "tabs": [
+          {
+            "title": "Study",
+            "fields": [
+              "project_id",
+              "species",
+              "chemical",
+              "study_type",
+              "gender"
+            ]
+          }
+        ]
+      },
+      "table": {
         "enabled": true,
-        "type": "export-to-workspace",
-        "title": "Export to Workspace",
-        "leftIcon": "datafile",
-        "rightIcon": "external-link"
+        "fields": [
+          "project_id",
+          "data_format",
+          "data_type",
+          "_study_id",
+          "submitter_id",
+          "species",
+          "gender",
+          "study_type",
+          "study_doi",
+          "id_acc_number"
+        ],
+        "linkFields": [
+          "study_doi",
+          "id_acc_number"
+        ]
+      },
+      "dropdowns": {
+        "download-table": {
+          "title": "Download Study Metadata Table"
+        }
+      },
+      "buttons": [
+        {
+          "enabled": true,
+          "type": "export-to-workspace",
+          "title": "Export to Workspace",
+          "leftIcon": "datafile",
+          "rightIcon": "external-link"
+        }
+      ],
+      "guppyConfig": {
+        "dataType": "study",
+        "nodeCountTitle": "Studies",
+        "fieldMapping": [],
+        "manifestMapping": {
+          "resourceIndexType": "file",
+          "resourceIdField": "object_id",
+          "referenceIdFieldInResourceIndex": "_study_id",
+          "referenceIdFieldInDataIndex": "_study_id"
+        }
       }
-    ],
-    "guppyConfig": {
-      "dataType": "study",
-      "nodeCountTitle": "Studies",
-      "fieldMapping": [],
-      "manifestMapping": {
-        "resourceIndexType": "file",
-        "resourceIdField": "object_id",
-        "referenceIdFieldInResourceIndex": "_study_id",
-        "referenceIdFieldInDataIndex": "_study_id"
+    },
+    {
+      "tabTitle": "Supplementary Datasets",
+      "charts": {
+        "project_id": {
+          "chartType": "count",
+          "title": "Projects"
+        }
+      },
+      "filters": {
+        "tabs": [
+          {
+            "title": "Dataset Properties",
+            "fields": [
+              "data_format",
+              "data_type",
+              "project_id"
+            ]
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "fields": [
+          "data_file_name",
+          "project_id",
+          "data_format",
+          "data_type"
+        ],
+        "linkFields": [
+        ]
+      },
+      "dropdowns": {
+        "download-table": {
+          "title": "Download Dataset Table"
+        }
+      },
+      "buttons": [
+        {
+          "enabled": false,
+          "type": "export-to-workspace",
+          "title": "Export to Workspace",
+          "leftIcon": "datafile",
+          "rightIcon": "download"
+        }
+      ],
+      "loginForDownload": true,
+      "guppyConfig": {
+        "dataType": "data_file",
+        "nodeCountTitle": "Datasets",
+        "fieldMapping": [
+        ],
+        "manifestMapping": {
+          "resourceIndexType": "study",
+          "resourceIdField": "object_id",
+          "referenceIdFieldInResourceIndex": "_study_id",
+          "referenceIdFieldInDataIndex": "_study_id"
+        }
       }
     }
-  }
+  ]
 }
+
+
