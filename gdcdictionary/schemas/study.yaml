@@ -34,6 +34,7 @@ required:
   - type
   - study_description
   - projects
+  - species
 
 uniqueKeys:
   - [id]
@@ -49,8 +50,8 @@ properties:
 
   title:
     description: Study name
-    type: string   
-  
+    type: string
+
   study_classification:
     description: or experiment_type.type of study protocol
     type: string
@@ -63,12 +64,23 @@ properties:
     description: in vivo, invitro (??)
     type: string
 
+  gender:
+    term:
+      $ref: "_terms.yaml#/gender"
+    enum:
+      - female
+      - male
+      - unknown
+      - unspecified
+      - not reported
+
+  study_type:
+    enum:
+      - in-vitro
+      - in-vivo
+
   chemical:
     description: study chemical compound
-    type: array
-
-  cell_line:
-    description: cell lines for the study
     type: array
 
   study_intervention:
@@ -82,10 +94,6 @@ properties:
   experiment_type:
     description: also called classification. General strategy used for differential analysis
     type: string
-
-  is_clinical_trial:
-    description: Flag that indicates whether this is a clinical trial study
-    type: boolean
 
   study_completeness:
     description: Description of data status. 0=Descriptive data and results as originally
