@@ -43,7 +43,6 @@ required:
   - subject_id
   - tissue
   - test_article
-  - species_and_strain
   - data_format
 
 uniqueKeys:
