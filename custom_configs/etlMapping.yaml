@@ -72,6 +72,8 @@ mappings:
     props:
       - name: project_id
       - name: submitter_id
+      - name: species
+      - name: strain
     aggregated_props:
       - name: _microarray_data_files_count
         path: microarray_data_files
@@ -104,6 +106,11 @@ mappings:
       - name: data_format
       - name: data_type
       - name: project_id
+      - name: geo_doi
+      - name: test_article
+      - name: tissue
+      - name: assay_type
+      - name: dose
     injecting_props:
       study:
         props:
