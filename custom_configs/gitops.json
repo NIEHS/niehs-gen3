@@ -20,32 +20,6 @@
       "chartCounts": [],
       "projectDetails": "boardCounts"
     },
-    "useArboristUI": true,
-    "showArboristAuthzOnProfile": true,
-    "showFenceAuthzOnProfile": true,
-    "hideSubmissionIfIneligible": true,
-    "componentToResourceMapping": {
-      "Workspace": {
-        "resource": "/workspace",
-        "method": "access",
-        "service": "jupyterhub"
-      },
-      "Analyze Data": {
-        "resource": "/workspace",
-        "method": "access",
-        "service": "jupyterhub"
-      },
-      "Query": {
-        "resource": "/query_page",
-        "method": "access",
-        "service": "query_page"
-      },
-      "Query Data": {
-        "resource": "/query_page",
-        "method": "access",
-        "service": "query_page"
-      }
-    },
     "components": {
       "appName": "NIEHS Data Commons",
       "index": {
