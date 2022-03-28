@@ -739,5 +739,8 @@
               "accessibleValidationField": "project_id"
             }
         }
-    ]
+    ],
+  "connectSrcCSPWhitelist": [
+    "https://ehsodslp02.niehs.nih.gov"
+  ]
 }
