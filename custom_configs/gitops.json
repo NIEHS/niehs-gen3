@@ -1,5 +1,4 @@
 {
-    "gaTrackingId": "UA-119127212-1",
     "graphql": {
       "boardCounts": [
         {
@@ -423,9 +422,9 @@
                 "chartType": "fullPie",
                 "title": "Study Modality"
               },
-              "sex": {
+              "chemical": {
                 "chartType": "fullPie",
-                "title": "Case Sex"
+                "title": "Case Chemical"
               }
             },
             "filters": {
