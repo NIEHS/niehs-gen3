@@ -1,0 +1,108 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "imaging_study"
+title: Imaging Study
+type: object
+namespace: http://gen3.niehs.nih.gov/
+category: medical_history
+program: '*'
+project: '*'
+description: Information related to an imaging study or exam done for diagnostic or research purposes, including patient clinical or contextual data recorded at the time of the imaging study.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: imaging_studies
+    label: related_to
+    target_type: case
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - cases
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  days_to_study:
+    description: The number of days between the case's index date and the date of the imaging study.
+    type: number
+
+  days_from_study_to_pos_covid_test:
+    description: The number of days from the imaging study to the patient's positive COVID-19 test(s).
+    type: array
+    items:
+      type: integer
+
+  days_from_study_to_neg_covid_test:
+    description: The number of days from the imaging study to the patient's negative COVID-19 test(s).
+    type: array
+    items:
+      type: integer
+
+  midrc_harmonized_study_description:
+    description: A standardized representation mapped by MIDRC Data Quality and Harmonization subcommittee to the study_description property in submitted imaging data.
+    enum:
+      - TBD
+
+  study_description:
+    description: (0008, 1030) Study Description.
+    type: string
+
+  study_modality:
+    description: The modalities of the imaging study; derived from (0008, 0060) Modality.
+    type: array
+    items:
+      type: string
+
+  age_at_imaging:
+    description: Age of the patient in years at the time the imaging study was performed.
+    type: number
+    maximum: 90
+    minimum: 0
+
+  body_part_examined:
+    description: (0018, 0015) Body Part Examined.
+    type: array
+    items:
+      type: string
+
+  study_location:
+    description: The location or geographical site of imaging, or the name of the clinic that performed the imaging study.
+    type: string
+
+  series_count:
+    description: The total number of imaging series performed during the imaging study.
+    type: integer
+
+  study_uid:
+    description: (0020, 000d) Study Instance UID
+    type: string
+
+  study_year:
+    description: The year when imaging study was performed; year component of Study Date (0008, 0020).
+    type: integer
+
+  study_year_shifted:
+    description: Indicates whether the study year has been shifted for de-identification.
+    type: boolean
+
+  cases:
+    description: The submitter_id or id of the case observed in this imaging_study, i.e., a link to a record in the parent node.
+    $ref: "_definitions.yaml#/to_one"
