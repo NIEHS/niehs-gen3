@@ -345,32 +345,32 @@ mappings:
             src: spatial_resolution
             fn: set
   - name: midrc_imaging_series
-      doc_type: imaging_series
-      type: collector
-      root: None
-      category: imaging_series
-      props:
-        - name: contrast_bolus_agent
-        - name: image_type
-        - name: lossy_image_compression
-        - name: manufacturer
-        - name: manufacturer_model_name
-        - name: modality
-        - name: pixel_spacing
-        - name: series_description
-        - name: series_name
-        - name: series_type
-        - name: series_uid
-        - name: spatial_resolution
-      injecting_props:
-        imaging_study:
-          props:
-            - name: _imaging_study_id
-              src: id
-              fn: set
-        ct_scan:
-          props:
-            - name: _ct_scan_id
-              src: id
-              fn: set
+    doc_type: imaging_series
+    type: collector
+    root: None
+    category: imaging_series
+    props:
+      - name: contrast_bolus_agent
+      - name: image_type
+      - name: lossy_image_compression
+      - name: manufacturer
+      - name: manufacturer_model_name
+      - name: modality
+      - name: pixel_spacing
+      - name: series_description
+      - name: series_name
+      - name: series_type
+      - name: series_uid
+      - name: spatial_resolution
+    injecting_props:
+      imaging_study:
+        props:
+          - name: _imaging_study_id
+            src: id
+            fn: set
+      ct_scan:
+        props:
+          - name: _ct_scan_id
+            src: id
+            fn: set
 
