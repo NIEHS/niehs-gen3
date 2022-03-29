@@ -122,6 +122,26 @@ properties:
     description: A high level description of the setup used to achieve the research objectives.
     type: string
 
+  cebs_accession_number:
+    description: cebs accession number
+    type: string
+
+  cebs_study_link:
+    description: cebs study link
+    type: string
+
+  chemical:
+    description: chemical or test article
+    type: string
+
+  chemical_link:
+    description: chemical link
+    type: string
+
+  species:
+    description: species
+    type: string
+
   projects:
     description: The code of the project that this dataset belongs to, i.e., a link to the parent node.
     $ref: "_definitions.yaml#/to_one_project"

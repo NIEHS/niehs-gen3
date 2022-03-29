@@ -21,6 +21,10 @@
             "type": "imaging_series"
         },
         {
+            "index": "cebs_publication",
+            "type": "publication"
+        },
+        {
             "index": "midrc_ct_scan",
             "type": "ct_scan"
         }

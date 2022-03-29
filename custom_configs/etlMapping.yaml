@@ -13,6 +13,11 @@ mappings:
       - name: license
       - name: publication_citation
       - name: data_citation
+      - name: cebs_accession_number
+      - name: cebs_study_link
+      - name: chemical
+      - name: chemical_link
+      - name: species
     aggregated_props:
       - name: _imaging_study_id
         path: cases.imaging_studies
@@ -376,4 +381,19 @@ mappings:
           - name: _ct_scan_id
             src: id
             fn: set
+  - name: cebs_publication
+      doc_type: publication
+      type: aggregator
+      root: publication
+      props:
+        - name: project_id
+        - name: pmid
+        - name: doi
+        - name: title
+        - name: geo_doi
+        - name: chemical_matrix_link
+        - name: author
+        - name: chemical
+        - name: species
+
 

@@ -3,11 +3,11 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "publication"
 title: Publication
 type: object
-namespace: http://ntp.niehs.nih.gov/cebs/
+namespace: http://gen3.niehs.nih.gov/
 category: administrative
 program: '*'
 project: '*'
-description: "Publication is a process - the act of issuing printed materials synonym: printed materials includes peer-reviewed journal articles, DNTP reports, white papers, deposition of data in SRA, etc. metadata: date of publication, authors, contact information, supporting data location, link to data in other databases,  GEO: species taxon and platform ID"
+description: "Publication for a project."
 additionalProperties: false
 submittable: true
 validators: null
@@ -48,10 +48,29 @@ properties:
     type:
       - string
       - "null"
+  title:
+    type: string
+    description: "Title of the publication"
   pmid:
     type: string
   doi:
     type: string
+    description: "DOI to a relevant publication"
+  geo_doi:
+    type: string
+    description: "GEO Accession link for project level data"
+  chemical_matrix_link:
+    type: string
+    description: "Chemical Matrix data link"
+  author:
+    type: string
+    description: "Author of publication"
+  chemical:
+    type: string
+    description: "Chemical of interest"
+  species:
+    type: string
+    desription: "Species of interest"
   projects:
     $ref: "_definitions.yaml#/to_many_project"
   project_id:
@@ -60,39 +79,3 @@ properties:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
     $ref: "_definitions.yaml#/datetime"
-
-  # CEBS added properties
-  publication_id:
-    type: string
-    description: "PUBMED ID for publication ID[PUBLICATION:PUBMED_ID]"
-  publication_title:
-    type: string
-    description: "Title/document_title for publication[PUBLICATION:Document_tile/Title]"
-  data_links:
-    type: array
-    minItems: 1
-    items:
-      data_link:
-        type: string
-        description: "link(ftp/sra) to data [PUBLICATION:DATA LINK]"
-  authors:
-    type: array
-    minItems: 1
-    items:
-        author:
-          type: string
-          description: "author name [PUBLICATION:Author]"
-
-  # not sure if following properties are needed here!!
-  parent_project:
-    type: string
-    description: "parent project for publication [PUBLICATION: PARENT INVESTIGATION]"
-  child_project:
-    type: string
-    description: "child study for publication [PUBLICATION: CHILD STUDY]"
-  species:
-    type: string
-    decription: "species/animal [PUBLICATION: Species]"
-  chemical:
-    type: string
-    description: "chemical used [PUBLICATION: chemical]"
