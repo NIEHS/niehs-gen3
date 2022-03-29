@@ -129,6 +129,8 @@ dmypy.json
 #sue
 test.py
 
+.DS_Store
+
 # Pyre type checker
 .pyre/
 .DS_Store
