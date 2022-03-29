@@ -362,6 +362,7 @@ mappings:
       - name: series_type
       - name: series_uid
       - name: spatial_resolution
+      - name: project_id
     injecting_props:
       imaging_study:
         props:
