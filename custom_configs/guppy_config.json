@@ -17,6 +17,10 @@
             "type": "imaging_study"
         },
         {
+            "index": "midrc_imaging_series",
+            "type": "imaging_series"
+        },
+        {
             "index": "midrc_ct_scan",
             "type": "ct_scan"
         }
