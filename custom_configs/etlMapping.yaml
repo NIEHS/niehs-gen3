@@ -382,18 +382,18 @@ mappings:
             src: id
             fn: set
   - name: cebs_publication
-      doc_type: publication
-      type: aggregator
-      root: publication
-      props:
-        - name: project_id
-        - name: pmid
-        - name: doi
-        - name: title
-        - name: geo_doi
-        - name: chemical_matrix_link
-        - name: author
-        - name: chemical
-        - name: species
+    doc_type: publication
+    type: aggregator
+    root: publication
+    props:
+      - name: project_id
+      - name: pmid
+      - name: doi
+      - name: title
+      - name: geo_doi
+      - name: chemical_matrix_link
+      - name: author
+      - name: chemical
+      - name: species
 
 
