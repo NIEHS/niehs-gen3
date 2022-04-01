@@ -267,7 +267,7 @@
           }
         },
         {
-            "tabTitle": "Datasets",
+            "tabTitle": "CEBS Studies",
             "charts": {
               "data_contributor": {
                 "chartType": "count",
@@ -282,7 +282,10 @@
                     "data_contributor",
                     "project_id",
                     "chemical",
-                    "species"
+                    "species",
+                    "in_vitro_in_vivo",
+                    "research_design",
+                    "research_description"
                   ]
                 }
               ]
@@ -297,6 +300,8 @@
                 "cebs_study_link",
                 "chemical",
                 "species",
+                "in_vitro_in_vivo",
+                "research_design",
                 "submitter_id"
               ],
               "linkFields": [
