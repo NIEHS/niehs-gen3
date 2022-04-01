@@ -280,7 +280,9 @@
                   "title": "Dataset Properties",
                   "fields":[
                     "data_contributor",
-                    "project_id"
+                    "project_id",
+                    "chemical",
+                    "species"
                   ]
                 }
               ]
@@ -290,20 +292,16 @@
               "fields": [
                 "data_url_doi",
                 "project_id",
-                "data_contributor",
-                "_imaging_studies_count",
-                "_ct_scans_count",
-                "_ct_series_count",
-                "_ct_instances_count",
                 "data_description",
                 "research_description",
-                "license",
-                "publication_citation",
-                "data_citation",
+                "cebs_study_link",
+                "chemical",
+                "species",
                 "submitter_id"
               ],
               "linkFields": [
-                "data_url_doi"
+                "data_url_doi",
+                "cebs_study_link"
               ]
             },
             "dropdowns": {
@@ -367,22 +365,6 @@
                   {
                     "field": "submitter_id",
                     "name": "Dataset Name"
-                  },
-                  {
-                    "field": "_imaging_studies_count",
-                    "name": "Imaging Studies Count"
-                  },
-                  {
-                    "field": "_ct_scans_count",
-                    "name": "CT Scans Count"
-                  },
-                  {
-                    "field": "_ct_series_count",
-                    "name": "CT Series Count"
-                  },
-                  {
-                    "field": "_ct_instances_count",
-                    "name": "CT Instances Count"
                   }
               ],
               "manifestMapping": {
