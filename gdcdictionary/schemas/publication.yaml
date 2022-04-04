@@ -3,11 +3,11 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "publication"
 title: Publication
 type: object
-namespace: http://gen3.niehs.nih.gov
+namespace: http://gen3.niehs.nih.gov/
 category: administrative
 program: '*'
 project: '*'
-description: "Publication is a process - the act of issuing printed materials synonym: printed materials includes peer-reviewed journal articles, DNTP reports, white papers, deposition of data in SRA, etc. metadata: date of publication, authors, contact information, supporting data location, link to data in other databases,  GEO: species taxon and platform ID"
+description: "Publication for a project."
 additionalProperties: false
 submittable: true
 validators: null
@@ -66,6 +66,22 @@ properties:
       - "null"
   doi:
     type: string
+    description: "DOI to a relevant publication"
+  geo_doi:
+    type: string
+    description: "GEO Accession link for project level data"
+  chemical_matrix_link:
+    type: string
+    description: "Chemical Matrix data link"
+  author:
+    type: string
+    description: "Author of publication"
+  chemical:
+    type: string
+    description: "Chemical of interest"
+  species:
+    type: string
+    desription: "Species of interest"
   projects:
     $ref: "_definitions.yaml#/to_many_project"
   project_id:

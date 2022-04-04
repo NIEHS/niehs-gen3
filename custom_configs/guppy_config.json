@@ -1,14 +1,34 @@
 {
     "indices": [
         {
-            "index": "study_etl",
-            "type": "study"
+            "index": "midrc_dataset",
+            "type": "dataset"
         },
         {
-            "index": "study_file",
-            "type": "file"
+            "index": "midrc_case",
+            "type": "case"
+        },
+        {
+            "index": "midrc_imaging_data_file",
+            "type": "imaging_data_file"
+        },
+        {
+            "index": "midrc_imaging_study",
+            "type": "imaging_study"
+        },
+        {
+            "index": "midrc_imaging_series",
+            "type": "imaging_series"
+        },
+        {
+            "index": "cebs_publication",
+            "type": "publication"
+        },
+        {
+            "index": "midrc_ct_scan",
+            "type": "ct_scan"
         }
     ],
-    "config_index": "study_file-array-config_0",
+    "config_index": "midrc_array-config",
     "auth_filter_field": "auth_resource_path"
 }
