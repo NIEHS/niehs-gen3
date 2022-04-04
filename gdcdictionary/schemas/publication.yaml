@@ -37,6 +37,24 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
+  geo:
+    type: string
+  pmid:
+    type: string
+  institution:
+    type: string
+  authors:
+    type: array
+    minItems: 1
+    items:
+      author:
+        type: string
+        description: "author name [PUBLICATION:Author]"
+  co-aithors:
+    type: array
+
+    
+  #additional information for the future model
   type:
     enum: [ "publication" ]
   id:
@@ -48,8 +66,6 @@ properties:
     type:
       - string
       - "null"
-  pmid:
-    type: string
   doi:
     type: string
   projects:
@@ -75,24 +91,3 @@ properties:
       data_link:
         type: string
         description: "link(ftp/sra) to data [PUBLICATION:DATA LINK]"
-  authors:
-    type: array
-    minItems: 1
-    items:
-        author:
-          type: string
-          description: "author name [PUBLICATION:Author]"
-
-  # not sure if following properties are needed here!!
-  parent_project:
-    type: string
-    description: "parent project for publication [PUBLICATION: PARENT INVESTIGATION]"
-  child_project:
-    type: string
-    description: "child study for publication [PUBLICATION: CHILD STUDY]"
-  species:
-    type: string
-    decription: "species/animal [PUBLICATION: Species]"
-  chemical:
-    type: string
-    description: "chemical used [PUBLICATION: chemical]"
