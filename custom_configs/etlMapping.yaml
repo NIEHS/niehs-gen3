@@ -1,21 +1,40 @@
 mappings:
-  - name: publication_etl
-    doc_type: publication
+  - name: study_etl
+    doc_type: study
     type: aggregator
-    root: publication
+    root: study
     props:
       - name: project_id
       - name: submitter_id
-      - name: pmid
-      - name: doi
+      - name: id_acc_number
+      - name: species
+      - name: chemical
+      - name: study_doi
+      - name: study_description
       - name: title
+      - name: gender
+      - name: study_type
     aggregated_props:
-      - name: _p03_non_neoplastic_charts_count
-        path: p03_non_neoplastic_charts
+      - name: _microarray_data_files_count
+        path: microarray_data_files
         fn: count
     parent_props:
       - path: projects[project_code:code,project_name:name]
-  - name: publication_file
+    joining_props:
+      - index: file
+        join_on: _study_id
+        props:
+          - name: data_format
+            src: data_format
+            fn: set
+          - name: data_type
+            src: data_type
+            fn: set
+          - name: data_file_name
+            src: data_file_name
+            fn: set
+
+  - name: study_file
     doc_type: file
     type: collector
     root: None
@@ -23,8 +42,25 @@ mappings:
     props:
       - name: object_id
       - name: md5sum
-      - name: file_name
+      - name: data_file_name
       - name: file_size
       - name: data_format
       - name: data_type
       - name: state
+      - name: tissue
+      - name: test_article
+      - name: dose
+      - name: geo_doi
+      - name: assay_type
+    injecting_props:
+      study:
+        props:
+          - name: _study_id
+            src: id
+            fn: set
+          - name: submitter_id
+            src: submitter_id
+            fn: set
+          - name: project_id
+            src: project_id
+            fn: set

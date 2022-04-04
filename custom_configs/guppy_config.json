@@ -1,14 +1,14 @@
 {
     "indices": [
         {
-            "index": "publication_etl",
-            "type": "publication"
+            "index": "study_etl",
+            "type": "study"
         },
         {
-            "index": "publication_file",
+            "index": "study_file",
             "type": "file"
         }
     ],
-    "config_index": "etl_array-config",
+    "config_index": "study_file-array-config_0",
     "auth_filter_field": "auth_resource_path"
 }
