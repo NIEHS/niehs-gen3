@@ -28,15 +28,31 @@ links:
     required: true
 
 required:
-  - submitter_id
-  - type
-  - projects
+  - geo
 
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
 
 properties:
+  geo:
+    type: string
+  pmid:
+    type: string
+  institution:
+    type: string
+  authors:
+    type: array
+    minItems: 1
+    items:
+      author:
+        type: string
+        description: "author name [PUBLICATION:Author]"
+  co-aithors:
+    type: array
+
+
+  #additional information for the future model
   type:
     enum: [ "publication" ]
   id:
@@ -48,11 +64,6 @@ properties:
     type:
       - string
       - "null"
-  title:
-    type: string
-    description: "Title of the publication"
-  pmid:
-    type: string
   doi:
     type: string
     description: "DOI to a relevant publication"
@@ -79,3 +90,18 @@ properties:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
     $ref: "_definitions.yaml#/datetime"
+
+  # CEBS added properties
+  publication_id:
+    type: string
+    description: "PUBMED ID for publication ID[PUBLICATION:PUBMED_ID]"
+  publication_title:
+    type: string
+    description: "Title/document_title for publication[PUBLICATION:Document_tile/Title]"
+  data_links:
+    type: array
+    minItems: 1
+    items:
+      data_link:
+        type: string
+        description: "link(ftp/sra) to data [PUBLICATION:DATA LINK]"
