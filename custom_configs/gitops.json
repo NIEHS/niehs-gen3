@@ -102,6 +102,124 @@
       "explorerPublic": true
     },
     "analysisTools": [ ],
+  "explorerConfig": [
+    {
+            "tabTitle": "CEBS Studies",
+            "charts": {
+              "data_contributor": {
+                "chartType": "count",
+                "title": "Data Contributors"
+              }
+            },
+            "filters": {
+              "tabs": [
+                {
+                  "title": "Dataset Properties",
+                  "fields":[
+                    "data_contributor",
+                    "project_id",
+                    "chemical",
+                    "species",
+                    "in_vitro_in_vivo",
+                    "research_design",
+                    "research_description"
+                  ]
+                }
+              ]
+            },
+            "table": {
+              "enabled": true,
+              "fields": [
+                "data_url_doi",
+                "project_id",
+                "data_description",
+                "research_description",
+                "cebs_study_link",
+                "chemical",
+                "species",
+                "in_vitro_in_vivo",
+                "research_design",
+                "submitter_id"
+              ],
+              "linkFields": [
+                "data_url_doi",
+                "cebs_study_link"
+              ]
+            },
+            "dropdowns": {
+              "download-table": {
+                "title": "Download Dataset Table"
+              }
+            },
+            "buttons": [
+              {
+                "enabled": true,
+                "type": "data-json",
+                "title": "JSON",
+                "dropdownId": "download-table",
+                "leftIcon": "datafile",
+                "rightIcon": "download",
+                "fileName": "datasets_table.json"
+              },
+              {
+                "enabled": true,
+                "type": "data-tsv",
+                "title": "TSV",
+                "dropdownId": "download-table",
+                "leftIcon": "datafile",
+                "rightIcon": "download",
+                "fileName": "datasets_table.tsv"
+              },
+              {
+                "enabled": true,
+                "type": "data-csv",
+                "title": "CSV",
+                "dropdownId": "download-table",
+                "leftIcon": "datafile",
+                "rightIcon": "download",
+                "fileName": "datasets_table.csv"
+              },
+              {
+                "enabled": true,
+                "type": "manifest",
+                "title": "Download File Manifest for Datasets",
+                "leftIcon": "datafile",
+                "rightIcon": "download",
+                "fileName": "dataset_manifest.json"
+              },
+              {
+                "enabled": false,
+                "type": "export-to-workspace",
+                "title": "Export to Workspace",
+                "leftIcon": "datafile",
+                "rightIcon": "download"
+              }
+            ],
+            "loginForDownload": true,
+            "guppyConfig": {
+              "dataType": "dataset",
+              "nodeCountTitle": "Datasets",
+              "fieldMapping": [
+                  {
+                    "field": "project_id",
+                    "name": "Dataset ID"
+                  },
+                  {
+                    "field": "submitter_id",
+                    "name": "Dataset Name"
+                  }
+              ],
+              "manifestMapping": {
+                "resourceIndexType": "imaging_data_file",
+                "resourceIdField": "object_id",
+                "referenceIdFieldInResourceIndex": "_dataset_id",
+                "referenceIdFieldInDataIndex": "_dataset_id"
+              },
+              "accessibleFieldCheckList": ["project_id"],
+              "accessibleValidationField": "project_id"
+            }
+        }
+  ],
   "connectSrcCSPWhitelist": [
     "https://ehsodslp02.niehs.nih.gov"
   ]
