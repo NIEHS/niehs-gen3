@@ -1,0 +1,128 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "dataset"
+title: Dataset
+type: object
+nodeTerms: null
+namespace: http://gen3.niehs.nih.gov/
+category: administrative
+program: '*'
+project: '*'
+description: A set of data associate with studys.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: projects
+    backref: dataset
+    label: performed_for
+    target_type: project
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - title
+  #- objective
+#uniqueKeys:
+  #- [id]
+  #- [project_id,submitter_id]
+
+properties:
+
+  #$ref: "_definitions.yaml#/ubiquitous_properties"
+
+  title:
+    description: study title name
+    type: string
+
+  objective:
+    type: string
+
+  design:
+    type: string
+
+  geo_profile_type: GEO profile type
+    type: string
+
+  platform:
+    type: string
+
+  platform_description:
+    type: string
+
+  species:
+    description: in vivo, invitro (??)
+    type: string
+
+  gender:
+    term:
+      $ref: "_terms.yaml#/gender"
+    enum:
+      - female
+      - male
+      - unknown
+      - unspecified
+      - not reported
+
+  strain:
+    type: string
+
+  tissue:
+    type: array
+
+  chemicals:
+    description: study chemical compounds
+    type: array
+
+  multiple_chemicals:
+    description: if it is a group of chemical compound we descript in text
+    type: string
+
+  cell_line:
+    type: string
+
+  genetic_change:
+    type: string
+
+  other_agent
+   type: string
+
+  study_duration:
+    type: string
+
+  time_points:
+    type: array
+
+  route:
+    type: string
+
+  vehicle:
+    type: string
+  #additional metadata:
+  #Digital object identifier (DOI) is a type of persistent identifier
+  additional_in-life_data:
+    type: string
+
+  cebs_acc_no:
+    type: string
+
+  geo_link:
+    type: string
+
+  analysis_link:
+    type: string
+
+  additional_information:
+    type: string
+ 
+
+  projects:
+    $ref: "_definitions.yaml#/to_one_project"

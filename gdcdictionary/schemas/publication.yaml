@@ -28,9 +28,7 @@ links:
     required: true
 
 required:
-  - submitter_id
-  - type
-  - projects
+  - geo
 
 uniqueKeys:
   - [ id ]
@@ -53,7 +51,7 @@ properties:
   co-aithors:
     type: array
 
-    
+
   #additional information for the future model
   type:
     enum: [ "publication" ]
