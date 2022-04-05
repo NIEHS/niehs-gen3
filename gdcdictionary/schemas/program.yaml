@@ -17,7 +17,6 @@ systemProperties:
 
 required:
   - name
-  - dbgap_accession_number
 
 uniqueKeys:
   - [id]
