@@ -114,7 +114,8 @@ properties:
 
   #additional metadata:
   #Digital object identifier (DOI) is a type of persistent identifier
-  additional_in-life_data:
+
+  additional_in_life_data:
     type: string
   cebs_acc_no:
     description: cebs accession number
