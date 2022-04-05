@@ -121,7 +121,6 @@
                   "title": "Dataset Properties",
                   "fields":[
                     "project_id",
-                    "design",
                     "chemicals",
                     "species",
                     "strain",
