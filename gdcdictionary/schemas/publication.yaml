@@ -51,8 +51,18 @@ properties:
   title:
     type: string
     description: "Title of the publication"
+  geo:
+    type: string
   pmid:
     type: string
+  institution:
+    type: string
+  author:
+    type: string
+  co_author:
+    type: string
+
+  #additional information for the future model
   doi:
     type: string
     description: "DOI to a relevant publication"
@@ -62,20 +72,17 @@ properties:
   chemical_matrix_link:
     type: string
     description: "Chemical Matrix data link"
-  author:
-    type: string
-    description: "Author of publication"
   chemical:
     type: string
     description: "Chemical of interest"
   species:
     type: string
     desription: "Species of interest"
-  projects:
-    $ref: "_definitions.yaml#/to_many_project"
   project_id:
     type: string
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
     $ref: "_definitions.yaml#/datetime"
+  projects:
+    $ref: "_definitions.yaml#/to_many_project"
