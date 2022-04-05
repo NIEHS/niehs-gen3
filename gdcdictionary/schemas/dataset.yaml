@@ -77,26 +77,20 @@ properties:
     type: string
   platform_description:
     type: string
+  #Facet
   species:
     description: species
     type: string
-  gender:
-    term:
-      $ref: "_terms.yaml#/gender"
-    enum:
-      - female
-      - male
-      - unknown
-      - unspecified
-      - not reported
   strain:
     type: string
   tissue:
-    type: string
+    type: array
+  #Facet
   chemicals:
     description: study chemical compounds
-    type: string
-  multiple_chemicals:
+    type: array
+  #Facet
+  chemical_additional_info:
     description: if it is a group of chemical compound we descript in text
     type: string
   cell_line:
@@ -127,47 +121,6 @@ properties:
   analysis_link:
     type: string
   additional_information:
-    type: string
-  in_vitro_in_vivo:
-    description: in-vitro or in-vivo study
-    enum:
-      - "In-Vitro"
-      - "In-Vivo"
-  acknowledgement:
-    description: Publication acknowledgement(s) for the published dataset.
-    type: string
-  data_citation:
-    description: The citation for the published dataset.
-    type: string
-  data_contributor:
-    description: The name of the organization or individual that the contributed dataset belongs to.
-    type: string
-  data_description:
-    description: A brief, free-text description of the data files and associated metadata provided for this dataset.
-    type: string
-  data_url_doi:
-    description: A URL or DOI for the source of the dataset or the contributing organization's website.
-    type: string
-  disease_type:
-    description: The primary type of disease studied in this dataset, if applicable.
-    type: string
-  license:
-    description: The license under which the daaset has been published.
-    type: string
-  longitudinal:
-    description: Indicates whether the dataset has longitudinal or time-series data.
-    type: boolean
-  primary_site:
-    description: The primary body site studied in this dataset.
-    type: string
-  publication_citation:
-    description: The major or main publication(s) associated with the data itself or with the publication that published the dataset.
-    type: string
-  research_description:
-    description: If the dataset is related to a research study, provide a brief, free-text description or abstract of the study being performed, for example, the hypothesis being tested and a very brief description of the materials, methods and results.
-    type: string
-  research_setup:
-    description: A high level description of the setup used to achieve the research objectives.
     type: string
   projects:
     description: The code of the project that this dataset belongs to, i.e., a link to the parent node.

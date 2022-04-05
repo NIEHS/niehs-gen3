@@ -55,7 +55,18 @@ properties:
     type: string
   geo:
     type: string
+  geo_link:
+    type: string
+    description: "GEO Accession link for project level data"
   pmid:
+    type: string
+  pubmed_link:
+    type: string
+  cebs_acc_no:
+    description: cebs accession number
+    type: string
+  cebs_link:
+    description: cebs accession number
     type: string
   institution:
     type: string
@@ -63,17 +74,6 @@ properties:
     type: string
   co_author:
     type: string
-
-  #additional information for the future model
-  doi:
-    type: string
-    description: "DOI to a relevant publication"
-  geo_doi:
-    type: string
-    description: "GEO Accession link for project level data"
-  chemical_matrix_link:
-    type: string
-    description: "Chemical Matrix data link"
   chemical:
     type: string
     description: "Chemical of interest"
@@ -82,6 +82,8 @@ properties:
     desription: "Species of interest"
   project_id:
     type: string
+  year_published:
+      type: string
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
