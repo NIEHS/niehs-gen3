@@ -60,6 +60,8 @@ properties:
     $ref: "_definitions.yaml#/datetime"
 
   # additional properties to describe the dataset
+  internal_id:
+    type: string
   title:
     description: study title name
     type: string

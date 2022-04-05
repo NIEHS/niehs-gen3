@@ -51,6 +51,8 @@ properties:
   title:
     type: string
     description: "Title of the publication"
+  internal_id:
+    type: string
   geo:
     type: string
   pmid:
