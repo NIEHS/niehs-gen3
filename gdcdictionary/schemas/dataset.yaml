@@ -31,7 +31,7 @@ links:
 required:
   - submitter_id
   - type
-  - data_description
+  - title
   - projects
 
 uniqueKeys:
