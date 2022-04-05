@@ -6,11 +6,11 @@
       "projectDetails": "boardCounts"
     },
     "components": {
-      "appName": "NIEHS Data Commons",
+      "appName": "CEBS Expression Data Commons",
       "index": {
         "introduction": {
-          "heading": "NIEHS Data Commons",
-          "text": "The NIEHS Data Commons supports the management, analysis and sharing of NIEHS Data",
+          "heading": "CEBS Expression Data Commons",
+          "text": "The CEBS Expression Data Commons supports the management, analysis and sharing of CEBS Expression Data",
           "link": "/submission"
         },
         "buttons": [
@@ -81,8 +81,8 @@
         ]
       },
       "login": {
-        "title": "NIEHS Data Commons",
-        "subTitle": "Explore, Analyze, and Share NIEHS Data",
+        "title": "CEBS Expression Data Commons",
+        "subTitle": "Explore, Analyze, and Share CEBS Expression Data",
         "text": "",
         "contact": "If you have any questions about access or the registration process, please contact ",
         "email": "mike.conway@nih.gov"
@@ -104,11 +104,15 @@
     "analysisTools": [ ],
   "explorerConfig": [
     {
-            "tabTitle": "CEBS Studies",
+            "tabTitle": "CEBS Expression Datasets",
             "charts": {
-              "data_contributor": {
+              "chemicals": {
                 "chartType": "count",
-                "title": "Data Contributors"
+                "title": "Chemicals"
+              },
+              "": {
+                "species": "count",
+                "title": "Specis"
               }
             },
             "filters": {
@@ -116,13 +120,16 @@
                 {
                   "title": "Dataset Properties",
                   "fields":[
-                    "data_contributor",
                     "project_id",
-                    "chemical",
+                    "design",
+                    "chemicals",
                     "species",
-                    "in_vitro_in_vivo",
-                    "research_design",
-                    "research_description"
+                    "strain",
+                    "tissue",
+                    "cell_line",
+                    "genetic_change",
+                    "study_duration",
+                    "platform"
                   ]
                 }
               ]
@@ -130,20 +137,29 @@
             "table": {
               "enabled": true,
               "fields": [
-                "data_url_doi",
                 "project_id",
-                "data_description",
-                "research_description",
-                "cebs_study_link",
-                "chemical",
+                "title",
+                "design",
+                "platform",
                 "species",
-                "in_vitro_in_vivo",
-                "research_design",
-                "submitter_id"
+                "strain",
+                "chemicals",
+                "tissue",
+                "cell_line",
+                "genetic_change",
+                "other_agent",
+                "study_duration",
+                "time_points",
+                "route",
+                "vehicle",
+                "geo_link",
+                "analysis_link",
+                "additional_information"
               ],
               "linkFields": [
-                "data_url_doi",
-                "cebs_study_link"
+                "geo_link",
+                "analysis_link",
+                "additional_information"
               ]
             },
             "dropdowns": {
@@ -198,7 +214,7 @@
             "loginForDownload": true,
             "guppyConfig": {
               "dataType": "dataset",
-              "nodeCountTitle": "Datasets",
+              "nodeCountTitle": "Expression Datasets",
               "fieldMapping": [
                   {
                     "field": "project_id",
@@ -209,12 +225,6 @@
                     "name": "Dataset Name"
                   }
               ],
-              "manifestMapping": {
-                "resourceIndexType": "imaging_data_file",
-                "resourceIdField": "object_id",
-                "referenceIdFieldInResourceIndex": "_dataset_id",
-                "referenceIdFieldInDataIndex": "_dataset_id"
-              },
               "accessibleFieldCheckList": ["project_id"],
               "accessibleValidationField": "project_id"
             }
