@@ -110,9 +110,9 @@
                 "chartType": "fullPie",
                 "title": "Chemicals"
               },
-              "Species": {
+              "species": {
                 "species": "fullPie",
-                "title": "species"
+                "title": "Species"
               }
             },
             "filters": {
