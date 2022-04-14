@@ -107,12 +107,12 @@
             "tabTitle": "CEBS Expression Datasets",
             "charts": {
               "chemicals": {
-                "chartType": "count",
+                "chartType": "fullPie",
                 "title": "Chemicals"
               },
-              "": {
-                "species": "count",
-                "title": "Specis"
+              "species": {
+                "chartType": "fullPie",
+                "title": "species"
               }
             },
             "filters": {
@@ -232,6 +232,6 @@
         }
   ],
   "connectSrcCSPWhitelist": [
-    "https://ehsodslp02.niehs.nih.gov"
+    "https://ehsntpld06.niehs.nih.gov"
   ]
 }
