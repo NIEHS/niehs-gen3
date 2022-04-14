@@ -128,6 +128,7 @@
                     "cell_line",
                     "genetic_change",
                     "study_duration",
+                    "project_date",
                     "platform"
                   ]
                 }
@@ -137,6 +138,7 @@
               "enabled": true,
               "fields": [
                 "project_id",
+                "project_date",
                 "title",
                 "design",
                 "platform",
