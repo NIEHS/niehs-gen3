@@ -121,13 +121,9 @@
                   "title": "Dataset Properties",
                   "fields":[
                     "project_id",
-                    "chemicals",
+                    "project_investigator_affiliation",
                     "species",
                     "strain",
-                    "tissue",
-                    "cell_line",
-                    "genetic_change",
-                    "study_duration",
                     "project_date",
                     "platform"
                   ]
@@ -139,6 +135,7 @@
               "fields": [
                 "project_id",
                 "project_date",
+                "project_investigator_affiliation",
                 "title",
                 "design",
                 "platform",
