@@ -229,6 +229,6 @@
         }
   ],
   "connectSrcCSPWhitelist": [
-    "https://ehsntpld06.niehs.nih.gov"
+    "https://gen3-dev.niehs.nih.gov"
   ]
 }
