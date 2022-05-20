@@ -121,10 +121,8 @@
                   "title": "Dataset Properties",
                   "fields":[
                     "project_id",
-                    "project_investigator_affiliation",
                     "species",
                     "strain",
-                    "project_date",
                     "platform"
                   ]
                 }
@@ -134,8 +132,6 @@
               "enabled": true,
               "fields": [
                 "project_id",
-                "project_date",
-                "project_investigator_affiliation",
                 "title",
                 "design",
                 "platform",

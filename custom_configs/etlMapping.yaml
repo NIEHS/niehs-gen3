@@ -29,6 +29,4 @@ mappings:
       - name: geo_link
       - name: analysis_link
       - name: additional_information
-    parent_props:
-      - path: projects[project_investigator_affiliation:investigator_affiliation, project_investigator_name:investigator_name, project_date:date_collected]
 
