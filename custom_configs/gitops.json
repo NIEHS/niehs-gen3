@@ -106,9 +106,9 @@
     {
             "tabTitle": "CEBS Expression Datasets",
             "charts": {
-              "chemicals": {
+              "project_investigator_affiliation": {
                 "chartType": "fullPie",
-                "title": "Chemicals"
+                "title": "Investigator Affiliation"
               },
               "species": {
                 "chartType": "fullPie",
