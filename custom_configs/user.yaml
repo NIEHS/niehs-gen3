@@ -21,7 +21,7 @@ authz:
   - name: workspace_users
     policies:
       - workspace
-      - sower_user
+      - sower
     users:
       - deeppatel.cs@gmail.com
       - michael.c.conway@gmail.com
@@ -125,6 +125,12 @@ authz:
     resource_paths:
     - /programs/jnkns
     - /programs/jnkns/projects/jenkins
+  - id: sower
+      description: be able to user sower
+      resource_paths:
+        - /sower
+      role_ids:
+        - sower_user
   - id: NTP
     role_ids:
     - reader
