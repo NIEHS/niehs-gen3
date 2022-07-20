@@ -253,11 +253,11 @@ authz:
     - /programs/jnkns
     - /programs/jnkns/projects/jenkins
   - id: sower
-      description: be able to user sower
-      resource_paths:
-        - /sower
-      role_ids:
-        - sower_user
+    description: be able to user sower
+    resource_paths:
+    - /sower
+    role_ids:
+    - sower_user
   - id: NTP
     role_ids:
     - reader
