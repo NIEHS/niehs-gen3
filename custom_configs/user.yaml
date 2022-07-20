@@ -176,7 +176,6 @@ authz:
     - storage_reader
     - storage_writer
     resource_paths:
-    - /programs/NTP/projects/00200058000200007
     - /programs/NTP/projects/EHES-10
     - /programs/NTP/projects/EHES-11
     - /programs/NTP/projects/EHES-12
