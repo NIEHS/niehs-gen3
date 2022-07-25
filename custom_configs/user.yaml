@@ -16,8 +16,9 @@ authz:
     users:
     - deeppatel.cs@gmail.com
     - michael.c.conway@gmail.com
+    - sznolte@gmail.com
 
-  # can do workspace operations
+    # can do workspace operations
   - name: workspace_users
     policies:
       - workspace
@@ -25,14 +26,16 @@ authz:
     users:
       - deeppatel.cs@gmail.com
       - michael.c.conway@gmail.com
+      - sznolte@gmail.com
 
-  # can create/update/delete indexd records
+    # can create/update/delete indexd records
   - name: indexd_admins
     policies:
     - indexd_admin
     users:
     - deeppatel.cs@gmail.com
     - michael.c.conway@gmail.com
+    - sznolte@gmail.com
 
   resources:
   - name: workspace
@@ -161,6 +164,70 @@ authz:
       - storage_reader
     resource_paths:
     - /open
+    - /programs/NTP/projects/EHES-10
+    - /programs/NTP/projects/EHES-11
+    - /programs/NTP/projects/EHES-12
+    - /programs/NTP/projects/EHES-13
+    - /programs/NTP/projects/EHES-14
+    - /programs/NTP/projects/EHES-15
+    - /programs/NTP/projects/EHES-16
+    - /programs/NTP/projects/EHES-17
+    - /programs/NTP/projects/EHES-18
+    - /programs/NTP/projects/EHES-19
+    - /programs/NTP/projects/EHES-20
+    - /programs/NTP/projects/EHES-21
+    - /programs/NTP/projects/EHES-22
+    - /programs/NTP/projects/EHES-23
+    - /programs/NTP/projects/EHES-24
+    - /programs/NTP/projects/EHES-25
+    - /programs/NTP/projects/EHES-26
+    - /programs/NTP/projects/EHES-27
+    - /programs/NTP/projects/EHES-28
+    - /programs/NTP/projects/EHES-29
+    - /programs/NTP/projects/EHES-30
+    - /programs/NTP/projects/EHES-31
+    - /programs/NTP/projects/EHES-32
+    - /programs/NTP/projects/EHES-33
+    - /programs/NTP/projects/EHES-34
+    - /programs/NTP/projects/EHES-35
+    - /programs/NTP/projects/EHES-36
+    - /programs/NTP/projects/EHES-37
+    - /programs/NTP/projects/EHES-38
+    - /programs/NTP/projects/EHES-39
+    - /programs/NTP/projects/EHES-40
+    - /programs/NTP/projects/EHES-41
+    - /programs/NTP/projects/EHES-42
+    - /programs/NTP/projects/EHES-43
+    - /programs/NTP/projects/EHES-44
+    - /programs/NTP/projects/EHES-45
+    - /programs/NTP/projects/EHES-46
+    - /programs/NTP/projects/EHES-47
+    - /programs/NTP/projects/EHES-48
+    - /programs/NTP/projects/EHES-49
+    - /programs/NTP/projects/EHES-50
+    - /programs/NTP/projects/EHES-51
+    - /programs/NTP/projects/EHES-52
+    - /programs/NTP/projects/EHES-53
+    - /programs/NTP/projects/EHES-54
+    - /programs/NTP/projects/EHES-55
+    - /programs/NTP/projects/EHES-56
+    - /programs/NTP/projects/EHES-57
+    - /programs/NTP/projects/EHES-58
+    - /programs/NTP/projects/EHES-59
+    - /programs/NTP/projects/EHES-60
+    - /programs/NTP/projects/EHES-61
+    - /programs/NTP/projects/EHES-62
+    - /programs/NTP/projects/EHES-63
+    - /programs/NTP/projects/EHES-64
+    - /programs/NTP/projects/EHES-65
+    - /programs/NTP/projects/EHES-66
+    - /programs/NTP/projects/EHES-67
+    - /programs/NTP/projects/EHES-68
+    - /programs/NTP/projects/EHES-69
+    - /programs/NTP/projects/EHES-70
+    - /programs/NTP/projects/EHES-71
+    - /programs/NTP/projects/EHES-72
+    - /programs/NTP/projects/EHES-74
   - id: all_programs_reader
     role_ids:
     - reader
@@ -372,6 +439,17 @@ users:
     - jnkns
     - NTP
     - services.sheepdog-admin
+  sznolte@gmail.com:
+    tags:
+      name: Mike Conway
+    #      email: johndoe@gmail.com
+    policies:
+      - workspace
+      - data_upload
+      - project_submitter
+      - jnkns
+      - NTP
+      - services.sheepdog-admin
 
 cloud_providers: {}
 groups: {}
