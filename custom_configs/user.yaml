@@ -17,6 +17,7 @@ authz:
     - deeppatel.cs@gmail.com
     - michael.c.conway@gmail.com
     - sznolte@gmail.com
+    - schmittcp@yahoo.com
 
     # can do workspace operations
   - name: workspace_users
@@ -27,6 +28,7 @@ authz:
       - deeppatel.cs@gmail.com
       - michael.c.conway@gmail.com
       - sznolte@gmail.com
+      - schmittcp@yahoo.com
 
     # can create/update/delete indexd records
   - name: indexd_admins
@@ -36,6 +38,7 @@ authz:
     - deeppatel.cs@gmail.com
     - michael.c.conway@gmail.com
     - sznolte@gmail.com
+    - schmittcp@yahoo.com
 
   resources:
   - name: workspace
@@ -440,6 +443,17 @@ users:
     - NTP
     - services.sheepdog-admin
   sznolte@gmail.com:
+    tags:
+      name: Mike Conway
+    #      email: johndoe@gmail.com
+    policies:
+      - workspace
+      - data_upload
+      - project_submitter
+      - jnkns
+      - NTP
+      - services.sheepdog-admin
+  schmittcp@yahoo.com:
     tags:
       name: Mike Conway
     #      email: johndoe@gmail.com
