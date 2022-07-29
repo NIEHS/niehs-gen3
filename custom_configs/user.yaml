@@ -455,7 +455,7 @@ users:
       - services.sheepdog-admin
   schmittcp@yahoo.com:
     tags:
-      name: Mike Conway
+      name: Charles Schmitt
     #      email: johndoe@gmail.com
     policies:
       - workspace
