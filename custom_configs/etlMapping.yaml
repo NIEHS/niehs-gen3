@@ -31,4 +31,48 @@ mappings:
       - name: additional_information
     parent_props:
       - path: projects[project_investigator_affiliation:investigator_affiliation, project_investigator_name:investigator_name, project_date:date_collected]
-
+  - name: supplementary_file
+      doc_type: file
+      type: collector
+      root: None
+      category: data_file
+      props:
+        - name: object_id
+        - name: md5sum
+        - name: data_file_name
+        - name: file_size
+        - name: data_format
+        - name: data_type
+      injecting_props:
+        dataset:
+          props:
+            - name: _dataset_id
+              src: id
+              fn: set
+            - name: submitter_id
+              src: submitter_id
+              fn: set
+            - name: project_id
+              src: project_id
+              fn: set
+            - name: platform
+              src: platform
+              fn: set
+            - name: species
+              src: species
+              fn: set
+            - name: strain
+              src: strain
+              fn: set
+            - name: tissue
+              src: tissue
+              fn: set
+            - name: chemicals
+              src: chemicals
+              fn: set
+            - name: route
+              src: route
+              fn: set
+            - name: vehicle
+              src: vehicle
+              fn: set
