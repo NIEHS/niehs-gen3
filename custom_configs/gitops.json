@@ -240,6 +240,6 @@
     }
   ],
   "connectSrcCSPWhitelist": [
-    "https://gen3-dev.niehs.nih.gov", "https://predev.niehs"
+    "https://gen3-dev.niehs.nih.gov", "https://gen3.niehs.nih.gov"
   ]
 }

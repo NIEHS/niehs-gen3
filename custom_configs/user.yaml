@@ -17,6 +17,7 @@ authz:
     - deeppatel.cs@gmail.com
     - michael.c.conway@gmail.com
     - sznolte@gmail.com
+    - test
 
     # can do workspace operations
   - name: workspace_users
@@ -27,6 +28,7 @@ authz:
       - deeppatel.cs@gmail.com
       - michael.c.conway@gmail.com
       - sznolte@gmail.com
+      - test
 
     # can create/update/delete indexd records
   - name: indexd_admins
@@ -36,6 +38,7 @@ authz:
     - deeppatel.cs@gmail.com
     - michael.c.conway@gmail.com
     - sznolte@gmail.com
+    - test
 
   resources:
   - name: workspace
@@ -450,6 +453,16 @@ users:
       - jnkns
       - NTP
       - services.sheepdog-admin
-
+  test:
+    tags:
+      name: test
+    #      email: johndoe@gmail.com
+    policies:
+      - workspace
+      - data_upload
+      - project_submitter
+      - jnkns
+      - NTP
+      - services.sheepdog-admin
 cloud_providers: {}
 groups: {}
