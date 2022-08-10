@@ -45,19 +45,19 @@ mappings:
     parent_props:
       - path: projects[project_investigator_affiliation:investigator_affiliation, project_investigator_name:investigator_name, project_date:date_collected]
   - name: supplementary_file
-      doc_type: file
-      type: collector
-      root: None
-      category: data_file
-      props:
+    doc_type: file
+    type: collector
+    root: None
+    category: data_file
+    props:
         - name: object_id
         - name: md5sum
         - name: data_file_name
         - name: file_size
         - name: data_format
         - name: data_type
-      injecting_props:
-        dataset:
+    injecting_props:
+    dataset:
           props:
             - name: _dataset_id
               src: id
