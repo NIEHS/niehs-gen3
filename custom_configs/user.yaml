@@ -18,6 +18,7 @@ authz:
     - michael.c.conway@gmail.com
     - sznolte@gmail.com
     - schmittcp@yahoo.com
+    - test
 
     # can do workspace operations
   - name: workspace_users
@@ -29,6 +30,7 @@ authz:
       - michael.c.conway@gmail.com
       - sznolte@gmail.com
       - schmittcp@yahoo.com
+      - test
 
     # can create/update/delete indexd records
   - name: indexd_admins
@@ -39,7 +41,7 @@ authz:
     - michael.c.conway@gmail.com
     - sznolte@gmail.com
     - schmittcp@yahoo.com
-
+    - test
   resources:
   - name: workspace
   - name: sower
@@ -456,6 +458,9 @@ users:
   schmittcp@yahoo.com:
     tags:
       name: Charles Schmitt
+  test:
+    tags:
+      name: test
     #      email: johndoe@gmail.com
     policies:
       - workspace
@@ -464,6 +469,5 @@ users:
       - jnkns
       - NTP
       - services.sheepdog-admin
-
 cloud_providers: {}
 groups: {}
