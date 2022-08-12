@@ -17,11 +17,11 @@
     "projectDetails": "boardCounts"
   },
   "components": {
-    "appName": "CEBS Expression Data Commons",
+    "appName": "DNTP Data Lab",
     "index": {
       "introduction": {
-        "heading": "CEBS Expression Data Commons",
-        "text": "The CEBS Expression Data Commons supports the management, analysis and sharing of CEBS Expression Data",
+        "heading": "DNTP Data Lab",
+        "text": "The Data Lab is evaluating the use of cloud-based approaches to increase access to and utility of DNTP data in alignment with NIH data sharing goals",
         "link": "/submission"
       },
       "buttons": [
@@ -92,8 +92,8 @@
       ]
     },
     "login": {
-      "title": "CEBS Expression Data Commons",
-      "subTitle": "Explore, Analyze, and Share CEBS Expression Data",
+      "title": "DNTP Data Lab",
+      "subTitle": "Explore, Analyze, and Share DNTP Expression Data",
       "text": "",
       "contact": "If you have any questions about access or the registration process, please contact ",
       "email": "mike.conway@nih.gov"
@@ -115,7 +115,7 @@
   "analysisTools": [ ],
   "explorerConfig": [
     {
-      "tabTitle": "CEBS Expression Datasets",
+      "tabTitle": "NTP Expression Datasets",
       "charts": {
         "project_investigator_affiliation": {
           "chartType": "bar",
@@ -213,9 +213,16 @@
           "fileName": "dataset_manifest.json"
         },
         {
-          "enabled": false,
+          "enabled": true,
           "type": "export-to-workspace",
           "title": "Export to Workspace",
+          "leftIcon": "datafile",
+          "rightIcon": "download"
+        },
+        {
+          "enabled": true,
+          "type": "export-pfb-to-workspace",
+          "title": "Export PFB to Workspace",
           "leftIcon": "datafile",
           "rightIcon": "download"
         }
@@ -240,6 +247,6 @@
     }
   ],
   "connectSrcCSPWhitelist": [
-    "https://gen3-dev.niehs.nih.gov", "https://predev.niehs"
+    "https://gen3-dev.niehs.nih.gov", "https://gen3.niehs.nih.gov"
   ]
 }

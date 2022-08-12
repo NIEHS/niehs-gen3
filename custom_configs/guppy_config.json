@@ -3,6 +3,10 @@
         {
             "index": "cebs_dataset",
             "type": "dataset"
+        },
+        {
+            "index": "supplementary_file",
+            "type": "file"
         }
     ],
     "config_index": "cebs_dataset-array-config",
