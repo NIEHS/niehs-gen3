@@ -30,7 +30,7 @@ mappings:
       - name: analysis_link
       - name: additional_information
     joining_props:
-      - index: file
+      - index: supplementary_file
         join_on: _dataset_id
         props:
           - name: data_format
@@ -52,40 +52,40 @@ mappings:
     props:
         - name: object_id
         - name: md5sum
-        - name:file_name
+        - name: file_name
         - name: file_size
         - name: data_format
         - name: data_type
     injecting_props:
-    dataset:
-          props:
-            - name: _dataset_id
-              src: id
-              fn: set
-            - name: submitter_id
-              src: submitter_id
-              fn: set
-            - name: project_id
-              src: project_id
-              fn: set
-            - name: platform
-              src: platform
-              fn: set
-            - name: species
-              src: species
-              fn: set
-            - name: strain
-              src: strain
-              fn: set
-            - name: tissue
-              src: tissue
-              fn: set
-            - name: chemicals
-              src: chemicals
-              fn: set
-            - name: route
-              src: route
-              fn: set
-            - name: vehicle
-              src: vehicle
-              fn: set
+      dataset:
+            props:
+              - name: _dataset_id
+                src: id
+                fn: set
+              - name: submitter_id
+                src: submitter_id
+                fn: set
+              - name: project_id
+                src: project_id
+                fn: set
+              - name: platform
+                src: platform
+                fn: set
+              - name: species
+                src: species
+                fn: set
+              - name: strain
+                src: strain
+                fn: set
+              - name: tissue
+                src: tissue
+                fn: set
+              - name: chemicals
+                src: chemicals
+                fn: set
+              - name: route
+                src: route
+                fn: set
+              - name: vehicle
+                src: vehicle
+                fn: set
