@@ -17,11 +17,8 @@ authz:
     - deeppatel.cs@gmail.com
     - michael.c.conway@gmail.com
     - sznolte@gmail.com
-<<<<<<< HEAD
     - schmittcp@yahoo.com
-=======
     - test
->>>>>>> 301f74cb914cd8da9e037c6ceee59d619a90d849
 
     # can do workspace operations
   - name: workspace_users
@@ -32,11 +29,10 @@ authz:
       - deeppatel.cs@gmail.com
       - michael.c.conway@gmail.com
       - sznolte@gmail.com
-<<<<<<< HEAD
       - schmittcp@yahoo.com
-=======
       - test
->>>>>>> 301f74cb914cd8da9e037c6ceee59d619a90d849
+      - schmittcp@yahoo.com
+      - test
 
     # can create/update/delete indexd records
   - name: indexd_admins
@@ -46,12 +42,8 @@ authz:
     - deeppatel.cs@gmail.com
     - michael.c.conway@gmail.com
     - sznolte@gmail.com
-<<<<<<< HEAD
     - schmittcp@yahoo.com
-=======
     - test
->>>>>>> 301f74cb914cd8da9e037c6ceee59d619a90d849
-
   resources:
   - name: workspace
   - name: sower
@@ -424,7 +416,6 @@ authz:
         action:
           method: access
           service: job
-
 clients:
   wts:
     policies:
@@ -465,15 +456,19 @@ users:
       - jnkns
       - NTP
       - services.sheepdog-admin
-<<<<<<< HEAD
   schmittcp@yahoo.com:
     tags:
       name: Charles Schmitt
-=======
+    policies:
+      - workspace
+      - data_upload
+      - project_submitter
+      - jnkns
+      - NTP
+      - services.sheepdog-admin
   test:
     tags:
       name: test
->>>>>>> 301f74cb914cd8da9e037c6ceee59d619a90d849
     #      email: johndoe@gmail.com
     policies:
       - workspace
@@ -482,9 +477,5 @@ users:
       - jnkns
       - NTP
       - services.sheepdog-admin
-<<<<<<< HEAD
-
-=======
->>>>>>> 301f74cb914cd8da9e037c6ceee59d619a90d849
 cloud_providers: {}
 groups: {}
