@@ -281,8 +281,6 @@
             "title": "Dataset Properties",
             "fields":[
               "project_id",
-              "project_investigator_affiliation",
-              "project_date",
               "species",
               "strain",
               "platform"
@@ -292,8 +290,6 @@
             "title": "Microarray Properties",
             "fields":[
               "project_id",
-              "project_investigator_affiliation",
-              "project_date",
               "species",
               "strain",
               "platform"
@@ -306,8 +302,6 @@
         "enabled": true,
         "fields": [
           "project_id",
-          "project_date",
-          "project_investigator_affiliation",
           "platform",
           "species",
           "strain",
@@ -377,7 +371,7 @@
       ],
       "loginForDownload": true,
       "guppyConfig": {
-        "dataType": "supplementary_file",
+        "dataType": "data_file",
         "nodeCountTitle": "CEL Files",
         "fieldMapping": [
         ],
