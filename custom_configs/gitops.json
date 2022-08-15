@@ -282,9 +282,9 @@
             "fields":[
               "project_id",
               "project_investigator_affiliation",
+              "project_date",
               "species",
               "strain",
-              "project_date",
               "platform"
             ]
           },
@@ -293,9 +293,9 @@
             "fields":[
               "project_id",
               "project_investigator_affiliation",
+              "project_date",
               "species",
               "strain",
-              "project_date",
               "platform"
             ]
           }
@@ -308,28 +308,15 @@
           "project_id",
           "project_date",
           "project_investigator_affiliation",
-          "title",
-          "design",
           "platform",
           "species",
           "strain",
-          "chemicals",
-          "tissue",
-          "cell_line",
-          "genetic_change",
-          "other_agent",
-          "study_duration",
-          "time_points",
-          "route",
-          "vehicle",
-          "geo_link",
-          "analysis_link",
-          "additional_information"
+          "file_name",
+          "file_size",
+          "data_type",
+          "data_format"
         ],
         "linkFields": [
-          "geo_link",
-          "analysis_link",
-          "additional_information"
         ]
       },
       "dropdowns": {
@@ -390,17 +377,9 @@
       ],
       "loginForDownload": true,
       "guppyConfig": {
-        "dataType": "dataset",
-        "nodeCountTitle": "Expression Datasets",
+        "dataType": "supplementary_file",
+        "nodeCountTitle": "CEL Files",
         "fieldMapping": [
-          {
-            "field": "project_id",
-            "name": "Dataset ID"
-          },
-          {
-            "field": "submitter_id",
-            "name": "Dataset Name"
-          }
         ],
         "accessibleFieldCheckList": ["project_id"],
         "accessibleValidationField": "project_id"
