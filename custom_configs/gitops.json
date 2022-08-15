@@ -266,10 +266,7 @@
     {
       "tabTitle": "CEL Microarray Expression Data",
       "charts": {
-        "project_investigator_affiliation": {
-          "chartType": "bar",
-          "title": "Investigator Affiliation"
-        },
+
         "species": {
           "chartType": "bar",
           "title": "species"
@@ -277,15 +274,6 @@
       },
       "filters": {
         "tabs": [
-          {
-            "title": "Dataset Properties",
-            "fields":[
-              "project_id",
-              "species",
-              "strain",
-              "platform"
-            ]
-          },
           {
             "title": "Microarray Properties",
             "fields":[
