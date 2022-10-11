@@ -6,7 +6,7 @@
         },
         {
             "index": "supplementary_file",
-            "type": "file"
+            "type": "data_file"
         }
     ],
     "config_index": "cebs_dataset-array-config",
